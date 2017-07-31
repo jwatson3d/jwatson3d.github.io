@@ -2,3 +2,5 @@ _site
 .sass-cache
 *.sublime-project
 *.sublime-workspace
+Gemfile
+Gemfile.lock
