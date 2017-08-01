@@ -1,12 +1,18 @@
 # Site settings
-title: Agile Software Engineer/Architect
-email: john.watson@ieee.org 
+title: Pragmatic Technology
+author: John Watson
+email: john@pragmatictech.guru
 description: > # this means to ignore newlines until "baseurl:"
   Exploring agile delivery by adapting software designs to
   embrace the "dev" in DevOps. Blending open source software
-  and tools in a corporate enterprise Windows-based world.
+  and tools in a corporate enterprise world.
+
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://blog.pragmatictech.guru" # the base hostname & protocol for your site
+
+permalink: pretty
+#permalink: /blog/:title
+
 twitter_username: jwatson3d
 github_username:  jwatson3d
 linkedin_username: jwatson3d
