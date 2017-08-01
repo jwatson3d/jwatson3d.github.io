@@ -4,3 +4,4 @@ _site
 *.sublime-workspace
 Gemfile
 Gemfile.lock
+/node_modules
