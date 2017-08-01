@@ -6,7 +6,7 @@ description: > # this means to ignore newlines until "baseurl:"
   embrace the "dev" in DevOps. Blending open source software
   and tools in a corporate enterprise Windows-based world.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://jwatson3d.github.io" # the base hostname & protocol for your site
+url: "http://blog.pragmatictech.guru" # the base hostname & protocol for your site
 twitter_username: jwatson3d
 github_username:  jwatson3d
 linkedin_username: jwatson3d
