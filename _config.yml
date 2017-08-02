@@ -27,6 +27,18 @@ version: v3.4.5
 # Build settings
 markdown: kramdown
 
+collections:
+  it145:
+    output      : true
+    permalink   : /:collection/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: it145
+    values:
+      layout: page
+
 # Exclude these files from your production _site
 exclude:
   - Gemfile
