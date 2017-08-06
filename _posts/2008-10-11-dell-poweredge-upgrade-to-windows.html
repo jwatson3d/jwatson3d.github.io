@@ -1,0 +1,13 @@
+---
+layout: post
+title: Dell PowerEdge Upgrade To Windows Server 2008
+date: '2008-10-11T03:20:00.000-04:00'
+author: John
+tags:
+- Virtualization
+modified_time: '2010-09-03T22:18:31.517-04:00'
+blogger_id: tag:blogger.com,1999:blog-2811308028656623966.post-4507768620222247214
+blogger_orig_url: http://pragmatic-software.blogspot.com/2008/10/dell-poweredge-upgrade-to-windows.html
+---
+
+I learned a few things the hard way and thought I'd pass them along in case it helps someone else. I bought a PowerEdge 2900 last winter planning on consolidating my five machines onto a single virtualized server. The PE 2900 has a pair of quad Xeons, supports up to 48 GB of RAM and 10 SCSI/SATA drives. Plenty of room for growth to support Windows Server 2008 and Hyper-V.<br />Doing my homework, I downloaded and burned the System Management Tools v. 5.5.0, A00 (5.4+ needed for Windows Server 2008 support) to have ready. I also upgraded my firmware to 2.4.3, rebooted, enabled Virtualization Technology in the BIOS and rebooted again. <br />I first tried running the upgrade from within Windows Server 2003 R2 SP1 x64 but kept finding that it was disabled. Since the PE was just a host for virtuals, I decided to try the System Build and Update Utility approach. Note that using this tool will reformat the boot partition and prepare it for the new OS. After choosing Windows Server 2008 Standard x64, SBUU prepared the installation and rebooted. <br />At this point you have to provide your own Windows installation DVD so I popped in my MAPS (Microsoft Action Pack Subscription) disc and good ol' Dell told me it wasn't valid. I didn't save the link but I found one post in the Dell support forums stating that their utility wouldn't recognize non-Retail discs. I "confirmed" this by trying an MSDN version that I downloaded with the same result. It would've been helpful if Dell splashed this information all over the utility and documentation so customers would know! I then downloaded a trial edition ISO, burned it and tried it next...bingo!<br />Hope this helps!!

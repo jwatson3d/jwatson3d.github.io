@@ -1,0 +1,14 @@
+---
+layout: post
+title: Build XML Directory Structure
+date: '2006-10-27T08:34:00.000-04:00'
+author: John
+tags:
+- XML/XSL
+- Build/Setup/SCM
+modified_time: '2010-09-05T14:34:29.769-04:00'
+blogger_id: tag:blogger.com,1999:blog-2811308028656623966.post-4761104373425579276
+blogger_orig_url: http://pragmatic-software.blogspot.com/2006/10/build-xml-directory-structure.html
+---
+
+<p>I've hacked together a little VBScript utility that will generate an Xml representation of a directory structure which you can download <a href="https://docs.google.com/a/wrbsoftware.com/uc?id=0B0Ogd3bGXPjJMGI0YWQyMzEtMTc5ZS00YzI1LWE0NGMtNTU1Mzg0ZGM4ZmE5&amp;export=download&amp;authkey=CJqG7pQJ&amp;hl=en" target="_blank">here</a>. I looked around for something that already did this and came across Pat Coleman's <a href="http://smallvoid.com/tweak/windows/dir2xml/">DIR2XML</a> utility. It provided a basis for what I needed but there were a couple of things I had to tweak - it generated a "flat" listing of all files and it produced an XHTML document via an XSL transform. Pat did a lot of the heavy lifting with the recursive directory scanning and getting file version information. <p>My <a href="https://docs.google.com/a/wrbsoftware.com/uc?id=0B0Ogd3bGXPjJMGI0YWQyMzEtMTc5ZS00YzI1LWE0NGMtNTU1Mzg0ZGM4ZmE5&amp;export=download&amp;authkey=CJqG7pQJ&amp;hl=en" target="_blank">bldDirXml.vbs</a> does the following: <ol> <li>Generates a nested Xml containing &lt;folder&gt; and &lt;file&gt; tags.  <li>Supports a "flattened" mode [-f] which pulls the information up into attributes of the folder or file tag instead of child elements.  <li>Generates a unique id for each folder and file.</li></ol> <p>To run it, use the following command: <strong>cscript bldDirXml.vbs "folderPath" [outputFilename] [-f]</strong> <p>All the usual disclaimers apply - it's a pretty brute force approach, not heavily tested, your mileage may vary, hold your nose if you look at the code, etc. <p>Enjoy! <p><a href="http://geekswithblogs.net/jwatson/archive/2006/10/27/95222.aspx"><font size="1">Original post</font></a></p>  

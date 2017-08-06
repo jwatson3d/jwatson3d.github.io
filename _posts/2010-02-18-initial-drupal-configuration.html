@@ -1,0 +1,14 @@
+---
+layout: post
+title: Initial Drupal Configuration
+date: '2010-02-18T05:54:00.000-05:00'
+author: John
+tags:
+- Drupal
+- OSS
+modified_time: '2010-09-04T10:28:05.114-04:00'
+blogger_id: tag:blogger.com,1999:blog-2811308028656623966.post-5192298822402276455
+blogger_orig_url: http://pragmatic-software.blogspot.com/2010/02/initial-drupal-configuration.html
+---
+
+<div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:0767317B-992E-4b12-91E0-4F059A8CECA8:387dd9a8-036d-44c5-b445-c32d2ea633bc" class="wlWriterEditableSmartContent">Technorati Tags: <a href="http://technorati.com/tags/drupal" rel="tag">drupal</a></div> <p>After initial setup and login, you should back up your database and site. Two reasons for doing so are if you do something “bad” and need to get back to an earlier state and in case you want to quickly clone the existing site. Use the Nautilus file manager to select the site directory (e.g. /home/username/www/drupal614) then right-click and choose “Create Archive”. Next, switch to (or open) a terminal session and use the following command to backup the MySQL database:</p> <blockquote> <p><font face="Courier New">mysqldump -u root -p {dbname} &gt; {dbname}-initial.sql</font></p></blockquote> <p>Next I find it useful to set some basic site information before doing anything else. Navigate to <em>Administer / Site Configuration / Site Information</em> and input your site name, slogan, and copyright statement as a footer message.</p> <p>The above is a “safety” feature however I learned from going to my <a href="http://groups.drupal.org/node/39324" target="_blank">first Drupal meetup</a> that there’s an even cooler and easier way to backup – using the <a href="http://drupal.org/project/demo" target="_blank">Demonstration Module</a>. It will take a snapshot of the database and easily allow you to restore to that point. Over the past three months I’ve used it dozens of time while testing my install and configuration scripts – which are a subject for another blog post.</p>  

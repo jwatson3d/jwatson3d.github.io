@@ -1,0 +1,13 @@
+---
+layout: post
+title: Windows Vista Beta 2 and missing msvcr71.dll
+date: '2006-06-13T12:12:00.000-04:00'
+author: John
+tags:
+- Vista
+modified_time: '2010-09-05T14:43:39.819-04:00'
+blogger_id: tag:blogger.com,1999:blog-2811308028656623966.post-7480608545169718307
+blogger_orig_url: http://pragmatic-software.blogspot.com/2006/06/windows-vista-beta-2-and-missing.html
+---
+
+<p>While trying out various things on the Beta 2 (Build 5384) I ran into a missing msvcr71.dll while trying to use <a href="http://passwordsafe.sourceforge.net/">Password Safe</a>. Since I was dual booting with XP on another partition, I copied over the file from \Windows\System32 on the XP partition. My super scientific methodology was to try launching again. Next it was msvcp70.dll and then finally msvcp71.dll. After that the application came up fine. Soooo...if you're missing any of these three, grab a copy of them from an XP installation and just simply drop them into \Windows\system32 on the Vista partition. Seems to work okay ;)</p> <p><a href="http://geekswithblogs.net/jwatson/archive/2006/06/13/81760.aspx"><font size="1">Original post</font></a></p>  

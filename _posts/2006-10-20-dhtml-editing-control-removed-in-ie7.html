@@ -1,0 +1,13 @@
+---
+layout: post
+title: DHTML Editing Control removed in IE7+
+date: '2006-10-20T14:41:00.000-04:00'
+author: John
+tags:
+- Vista
+modified_time: '2010-09-05T14:42:45.391-04:00'
+blogger_id: tag:blogger.com,1999:blog-2811308028656623966.post-1589091004673576302
+blogger_orig_url: http://pragmatic-software.blogspot.com/2006/10/dhtml-editing-control-removed-in-ie7.html
+---
+
+<p>This hasn't seen a lot of circulation (ok, I didn't pay much attention to it) and I was just bitten by it so I wanted to capture the links I found. The symptom is that using Exchange and Outlook Web Access from Vista (beta 2+) will not allow you to compose a new mail message. The DHTML ActiveX control for rich text editing doesn't get downloaded or instantiated.  <p>This was warned about <a href="http://blogs.msdn.com/ie/archive/2006/06/27/648850.aspx">here</a> back in June by B. Ashok on the IE blog. In there he also states "In the near future, we will also killbit the Safe for Scripting control in IE7 in Windows XP so that it will not get instantiated from the browser".  <p>There is a critical patch for Exchange mentioned and linked to in his (her?) blog post which will correct this issue.  <p>Also, I found a <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnlong/html/htmleditinfuture.asp">white paper</a> on MSDN that talks about this control and ways to work around it. The white paper explains how Vista does not get the control automatically any more but that they are making available an <a href="http://www.microsoft.com/downloads/details.aspx?FamilyId=B769A4B8-48ED-41A1-8095-5A086D1937CB&amp;displaylang=en">MSI installer</a> which will put it on Vista if you choose to manually install it.  <p><a href="http://geekswithblogs.net/jwatson/archive/2006/10/20/94671.aspx"><font size="1">Original post</font></a></p>  

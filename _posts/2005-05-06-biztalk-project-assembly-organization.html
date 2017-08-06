@@ -1,0 +1,13 @@
+---
+layout: post
+title: BizTalk Project / Assembly Organization Gotcha
+date: '2005-05-06T10:45:00.000-04:00'
+author: John
+tags:
+- BizTalk
+modified_time: '2010-09-04T21:01:13.946-04:00'
+blogger_id: tag:blogger.com,1999:blog-2811308028656623966.post-5775505168724144811
+blogger_orig_url: http://pragmatic-software.blogspot.com/2005/05/biztalk-project-assembly-organization.html
+---
+
+<p>I have a real-world experience to share for organizing your BizTalk projects and assemblies. I think the natural tendency is to group “like things” together so if you have an orchestration with a schema or two and a custom pipeline you'd define all these artifacts in the same project. This way they're always kept together in source control, on disk and deployed together.  <p>That same “benefit” is also the “gotcha” to watch out for. In my case, the custom pipeline is used to specify a schema formatted as a flat-file. The problem comes mostly during development and testing. If you update the orchestration you must stop, unenlist, undeploy, rebuild, deploy, bind, enlist, start - we've all done that hundreds of times. The problem is when undeploying the *assembly* containing the orchestration you're also undeploying the custom pipeline attached to the send port that's in the same assembly. BizTalk will then fallback to the standard Xml pipeline adapter on that port by default. Then, when you redeploy you're adding back the custom pipeline again which is where I get tripped up - I keep forgetting to switch the send port back to the custom pipeline.  <p>The moral of this story is to use separate projects/assemblies for your custom pipelines and schemas. While this creates lots of little assemblies running around in your GAC, it can greatly reduce the failed tests because you forgot to rebind things!  <p>Last note: Jon Flanders has more to say about <a href="http://www.masteringbiztalk.com/blogs/jon/PermaLink.aspx?guid=93006d15-d636-4b0f-8018-986478d7c1bd">pipeline components</a>. Too bad this came out during the last phases of development for my current project - not enough time and too much to do!  <p><a href="http://geekswithblogs.net/jwatson/archive/2005/05/06/39122.aspx"><font size="1">Original post</font></a></p>  

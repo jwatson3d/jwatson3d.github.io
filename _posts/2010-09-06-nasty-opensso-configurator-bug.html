@@ -1,0 +1,14 @@
+---
+layout: post
+title: A nasty OpenSSO configurator “bug”
+date: '2010-09-06T21:13:00.001-04:00'
+author: John
+tags:
+- Linux
+- OSS
+modified_time: '2010-09-06T21:13:56.745-04:00'
+blogger_id: tag:blogger.com,1999:blog-2811308028656623966.post-1487916787517859600
+blogger_orig_url: http://pragmatic-software.blogspot.com/2010/09/nasty-opensso-configurator-bug.html
+---
+
+<p>After lots of trial ‘n error, I found that when configuring a new, first instance you must use the FQDN when launching the configurator. In addition, your machine’s hostname must be in a FQDN with AT LEAST TWO DOTS in the name. The only reference I found on the web was buried in this thread that’s two years old: <a title="http://markmail.org/message/35rfpbayvrjzjuvg" href="http://markmail.org/message/35rfpbayvrjzjuvg">http://markmail.org/message/35rfpbayvrjzjuvg</a>. Also in the thread is mention that the default linux machine name of ‘localhost.localdomain’ isn’t supported and doesn’t work. What drives you crazy is the only error you see either through the JSP-based GUI or through the command line tool is “invalid hostname”.</p>  

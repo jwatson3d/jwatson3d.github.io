@@ -1,0 +1,13 @@
+---
+layout: post
+title: DotNetNuke (DNN) Error "Invalid attempt to read when no data is present"
+date: '2006-07-10T19:01:00.000-04:00'
+author: John
+tags:
+- DotNetNuke
+modified_time: '2010-09-05T14:43:17.660-04:00'
+blogger_id: tag:blogger.com,1999:blog-2811308028656623966.post-1546059728862292672
+blogger_orig_url: http://pragmatic-software.blogspot.com/2006/07/dotnetnuke-dnn-error-attempt-to-read.html
+---
+
+<p>When upgrading from 4.3.1 to 4.3.2 I encountered the above error. A few posts in the DNN Forums suggested there were problems with the portals defined. In my case, I had one portal defined with id of zero (0) yet there was also a portal id one (1) called “My Website” with most other columns null. I started the 4.x journey with 4.0.2 and checking there I found only one row in Portals. So....perhaps the upgrade to 4.3.1 did something? Anyway, I had just tried my cookbook approach to upgrading posted about <a href="http://pragmatic-software.blogspot.com/2006/07/how-to-upgrade-dotnetnuke-dnn-site.html">here</a> so I simply deleted the database, recopied, fixed the aliases then deleted the spurious row. When I first hit the site it ran through the upgrade perfectly then I clicked the link at the bottom of the upgrade report page and was “in like Flynn”.</p> <p><a href="http://geekswithblogs.net/jwatson/archive/2006/07/10/84651.aspx"><font size="1">Original post</font></a></p>  
