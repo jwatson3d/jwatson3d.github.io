@@ -4,6 +4,11 @@ title:  "Netbeans Quick Start"
 date:   2017-07-05 15:00:00
 categories: edu snhu it145
 ---
+Contents
+* TOC
+{:toc}
+<hr/>
+
 # Overview
 These notes are intended to help you quickly become productive using the [NetBeans](https://netbeans.org/features/java/) Integrated Development Environment, or IDE. IDEs are a category of software that provide sophisticated tools for developing programs and entire applications. Some other IDEs for Java include [Eclipse](https://projects.eclipse.org/projects/eclipse.jdt), the most popular with around 50% market share, and [IntelliJ](https://www.jetbrains.com/idea/). Eclipse is completely open-source while IntelliJ is commercial but also offers an open-source community edition.
 
