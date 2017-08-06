@@ -1,0 +1,13 @@
+---
+layout: post
+title: Specifying the output filename from a BizTalk orchestration
+date: '2005-05-02T16:40:00.000-04:00'
+author: John
+tags:
+- BizTalk
+modified_time: '2010-09-04T16:50:28.106-04:00'
+blogger_id: tag:blogger.com,1999:blog-2811308028656623966.post-7941656989143289079
+blogger_orig_url: http://pragmatic-software.blogspot.com/2005/05/specifying-output-filename-from-biztalk.html
+---
+
+<p>Once again, I needed a short simple answer but found either examples that didn't match exactly or newsgroup posts that were cryptic. In my case, the target system I was feeding data to required me to specify a filename that included the month and day of posting as well as the next sequential number. Thus the format is <strong>MyOutputFile_<em>mmdd-nnn</em>.out</strong> where <em>mm</em> is the month, <em>dd</em> is the day and <em>nnn</em> is the next sequential number (in the case of multiple runs during the same day). To do this, within the message assignment block you specify: <p><em>OutgoingMsgName(FILE.ReceivedFileName) = BTSHelper.GenerateOutputFilename();</em> <p>Here you are setting one of the message's context properties so it must be within the scope of the construct message. Then, in the SendPort configuration you can use the macro <strong><em>%SourceFileName%</em></strong> and it will be replaced with the filename you set in the message's context. <p>In this simplified example, BTSHelper.GenerateOutputFilename() is a method on a .NET helper class that contains logic for creating the filename. <p><a href="http://geekswithblogs.net/jwatson/archive/2005/05/02/38897.aspx"><font size="1">Original post</font></a></p>  

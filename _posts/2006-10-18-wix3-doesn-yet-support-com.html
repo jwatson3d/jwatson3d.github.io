@@ -1,0 +1,13 @@
+---
+layout: post
+title: WiX3 doesn't yet support COM+ installations
+date: '2006-10-18T08:57:00.000-04:00'
+author: John
+tags:
+- Build/Setup/SCM
+modified_time: '2010-09-05T14:02:09.390-04:00'
+blogger_id: tag:blogger.com,1999:blog-2811308028656623966.post-2243916642646101819
+blogger_orig_url: http://pragmatic-software.blogspot.com/2006/10/wix3-doesn-yet-support-com.html
+---
+
+<p>I found out while trying to make a COM+ installation that <a href="http://wix.sourceforge.net/">WiX3</a> doesn't yet support this. I was working on it originally with the latest WiX2 drop and ran into some difficulties (my own doing it turns out). While troubleshooting, I thought I'd give the latest 3.0 drop a try just in case some bugs had been fixed. <p>After backing up my *.wxs files and running them through the new wixcop using the -f switch to upgrade the schemas I received compile errors around the pubca extensions. Looking around, I found there wasn't any binaries for this in the drop. My next approach was to browse the CVS repositories thinking maybe they just weren't included in the packaging yet. Nope. <p>I jumped on the <a href="http://sourceforge.net/mailarchive/forum.php?forum_id=39929">wix-devs</a> mailing list and asked about the missing pubca stuff in Wix3. Kudos to <a href="http://blogs.msdn.com/robmen/">Rob Mensching</a> who responded within 30 mins. with the answer...the pubca custom action stuff has yet to be merged into the WiX3 codebase. So...if you're doing COM+ stuff you'll have to stick with WiX2 for now. <p><a href="http://geekswithblogs.net/jwatson/archive/2006/10/18/94420.aspx"><font size="1">Original post</font></a></p>  

@@ -1,0 +1,14 @@
+---
+layout: post
+title: MacPorts - a slick system for easily installing OSS
+date: '2010-10-16T18:02:00.002-04:00'
+author: John
+tags:
+- Apple
+- OSS
+modified_time: '2010-10-16T18:06:26.489-04:00'
+blogger_id: tag:blogger.com,1999:blog-2811308028656623966.post-5859183617676988303
+blogger_orig_url: http://pragmatic-software.blogspot.com/2010/10/macports-slick-system-for-easily.html
+---
+
+It's been a month since I moved from a Windows-based laptop to a MacBook Pro and I'm just now getting around to playing with development toys..err, tools. First order of business was to grab <a href="http://ant.apache.org/">Ant</a> and <a href="http://maven.apache.org/">Maven</a>. Knowing that OS X is built around Linux meant it should be pretty easy. Of course, nothing ever is and it turns out there's lots of advice going back several years in the 'Verse. After seeing several references to <a href="http://www.macports.org/">MacPorts</a> (formerly DarwinPorts) I checked it out. In a matter of minutes I had the two projects installed, configured and running.<br /><br />Want to install Tomcat? It's as simple as...<br /><blockquote><span style="font-family: Courier;">$ port list tomcat*<br />tomcat-native&nbsp; @1.1.20&nbsp; java/tomcat-native<br />tomcat5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @5.5.25&nbsp; java/tomcat5<br />tomcat6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @6.0.29&nbsp; java/tomcat6</span><br /><br /><span style="font-family: Courier;">sudo port install tomcat6</span></blockquote><br />Voila. There's 7,434 ports available at this time.<br /><br /><div style="color: #000088; text-align: right;"><small><em>Powered by</em> <a href="http://www.qumana.com/">Qumana</a></small></div>

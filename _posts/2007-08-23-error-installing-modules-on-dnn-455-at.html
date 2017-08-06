@@ -1,0 +1,14 @@
+---
+layout: post
+title: Error Installing Module(s) on DNN 4.5.5 at WebHost4Life
+date: '2007-08-23T00:27:00.000-04:00'
+author: John
+tags:
+- DotNetNuke
+- OSS
+modified_time: '2010-09-05T15:52:41.309-04:00'
+blogger_id: tag:blogger.com,1999:blog-2811308028656623966.post-7504244834968718211
+blogger_orig_url: http://pragmatic-software.blogspot.com/2007/08/error-installing-modules-on-dnn-455-at.html
+---
+
+<p>I was setting up a new DNN installation at WH4L and received this error while running the installation wizard. I first tried manually cleaning things out and doing it again only to receive the same error. Turns out the trick is the file permissions on the newly installed modules under \DesktopModules aren't correct. When you receive the errors, simply open a new browser window, login to WH4L control panel, go to Security | File Permission and reset permissions for NETWORK SERVICE with the box check for subfolders. When that's finished, switch back to the installer wizard with the errors still showing and you can now click Next to continue and finish the installation.</p>  

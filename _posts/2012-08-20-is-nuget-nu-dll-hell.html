@@ -1,0 +1,14 @@
+---
+layout: post
+title: Is NuGet the nu DLL hell?
+date: '2012-08-20T21:06:00.001-04:00'
+author: John Watson
+tags:
+- NuGEt
+- OSS
+modified_time: '2012-08-20T21:08:26.183-04:00'
+blogger_id: tag:blogger.com,1999:blog-2811308028656623966.post-3347697047821606008
+blogger_orig_url: http://pragmatic-software.blogspot.com/2012/08/is-nuget-nu-dll-hell.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">At first I suspected this but after this weekend I'm convinced we're not off the hook. With the RTM release of VS 2012 I decided to try upgrading my <a href="http://pragmatic-software.blogspot.com/2012/01/simple-circlesintroduction.html">Simple Circles</a> project to see how things turned out. VS 2012 was okay - I had played with the RC version a bit - however, the various NuGet packages that had been upgraded since May when I last worked on it were numerous so I started slogging through them.<br /><br />Several packages had no dependencies and things generally went well. However, the combination of <a href="http://nuget.org/packages/NHibernate">NHibernate</a>, <a href="http://nuget.org/packages/FluentNHibernate">Fluent NHibernate</a>, <a href="http://nuget.org/packages/NHibernate.Logging">NHibernate Logging</a>, <a href="http://nuget.org/packages/Common.Logging">Common Logging</a>, and <a href="http://nuget.org/packages/Common.Logging.Log4Net">Common.Logging.Log4Net</a> (esp. 2.0 which is really 1.2.11 - that's another story) proved too much to bother with. After bumping each of the packages to current versions and checking dependencies my NHibernate unit tests all failed with configuration errors as well as object not found problems.<br /><br />Don't get me wrong - I like and believe in NuGet as a system and approach. However, it's not a panacea and it doesn't prevent compatibility problems even when so called "dependencies" are met. You still have to test the combinations of software you're using. In my case, I simply reverted to the earlier backup and voila - problems went away. I did take a few minutes of carefully upgrading the packages that weren't related, e.g. jQuery, AutoMapper, etc. while testing each upgrade to ensure nothing broke (hooray for unit tests!). I'll save the gnarly knot of remaining packages for another day when I have more time to unravel the problem.</div>

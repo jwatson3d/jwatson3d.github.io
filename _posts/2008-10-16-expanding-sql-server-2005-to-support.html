@@ -1,0 +1,15 @@
+---
+layout: post
+title: Expanding SQL Server 2005 to support MOSS 2007
+date: '2008-10-16T05:05:00.000-04:00'
+author: John
+tags:
+- Virtualization
+- MOSS
+modified_time: '2010-09-03T22:08:12.200-04:00'
+thumbnail: http://3.bp.blogspot.com/_BvH8o_BvG-4/TIGo8i9F2rI/AAAAAAAAABk/aGgn_PYzEWk/s72-c/SQL_DualProcessor.png
+blogger_id: tag:blogger.com,1999:blog-2811308028656623966.post-444713452692187050
+blogger_orig_url: http://pragmatic-software.blogspot.com/2008/10/expanding-sql-server-2005-to-support.html
+---
+
+After <a href="http://geekswithblogs.net/jwatson/archive/2008/10/10/125773.aspx">setting up</a> my Dell PowerEdge 2900 with Windows Server 2008 x64 and Hyper-V, I began the steps of creating virtual environments for things I work on. I already had a virtual SQL Server 2005 which was underutilized - 768 MB allocated RAM and one processor for my various development projects.<br />I wanted to set up Microsoft Office SharePoint Server (MOSS) as a "mostly" single server install with the exception that I wanted to use the existing SQL Server 2005 installation instead of the embedded SQL Express Edition. To prepare for this, I added a second named instance to the SQL machine so that all MOSS traffic would be isolated and separately configurable.<br />The steps I took were to use Hyper-V manager to add a second processor and bump the allocated RAM up to 1 GB. After rebooting the VM, I went into Add/Remove Programs, selected the existing "Microsoft SQL Server 2005" entry and clicked "Change". On the "Microsoft SQL Server 2005 Maintenance" dialog, click the blue hyperlink above the list box for "To install a new component, click here". Browse for the install media and work your way through to the SQL database engine and choose it to add another one. Give this one a name (e.g. SQLMOSS) and continue through. When finished, be sure to use the Surface Area Configuration Tool to enable remote TCP/IP connections.<br />In my case, I decided to partition out the virtual as follows:<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/_BvH8o_BvG-4/TIGo8i9F2rI/AAAAAAAAABk/aGgn_PYzEWk/s1600/SQL_DualProcessor.png" imageanchor="1" style="clear: right; float: right; margin-bottom: 1em; margin-left: 1em;"><img border="0" src="http://3.bp.blogspot.com/_BvH8o_BvG-4/TIGo8i9F2rI/AAAAAAAAABk/aGgn_PYzEWk/s320/SQL_DualProcessor.png" /></a></div><ul><li>1/2 the memory (512 MB) maximum allocated to the SQLMOSS instance </li><li>1/2 of remainder (256 MB) for the development/play default instance </li><li>other 1/2 of remainder left for the OS (Windows 2003 R2) </li></ul><br />Here's a screen-shot of task manager running inside the Hyper-V remote console window:<br /><br /><a href="http://pragmaticenthusiast.net/Images/ExpandingSQLServer2005tosupportMOSS2007_FE50/SQL_DualProcessor.png"></a><br />Note that this was taken after configuration but before installing MOSS 2007.<br />The beauty of this virtualized approach is that I can add (or remove) processors and RAM depending on usage patterns and bottlenecks.

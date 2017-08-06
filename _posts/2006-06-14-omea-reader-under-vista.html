@@ -1,0 +1,13 @@
+---
+layout: post
+title: Omea Reader under Vista
+date: '2006-06-14T07:31:00.000-04:00'
+author: John
+tags:
+- Vista
+modified_time: '2010-09-05T14:43:30.845-04:00'
+blogger_id: tag:blogger.com,1999:blog-2811308028656623966.post-3589765605031663202
+blogger_orig_url: http://pragmatic-software.blogspot.com/2006/06/omea-reader-under-vista.html
+---
+
+<p>Omea Reader 2.1.1 (<a href="http://www.jetbrains.com/omea/reader/">free version</a>) installs and runs well under Vista Beta 2. I've discovered one quirk (design flaw?) though. I've set up a separate Data partition to make things easier dual-booting between XP and Vista. So after installing Omea under Vista, I hunted around for the settings on the XP install, found them under <font size="2" face="Courier New">C:\Documents and Settings\{username}\Local Settings\Application Data\JetBrains\Omea</font> and copied them over to the Data partition (e.g. <font size="2" face="Courier New">F:\Omea</font>). When I launch Omea under Vista and go to <font size="2" face="Courier New">Tools|Options|Omea|Paths</font> and set the database and log files path to <font size="2" face="Courier New">F:\Omea</font> it only accepts the new value for the Log Files. The database setting reverts to the standard Vista location <font size="2" face="Courier New">E:\Users\{username}\AppData\Local\JetBrains\Omea</font>. Seems like a bug or perhaps a design flaw?  <p>For the record, after exiting Omea and copying over the settings to <font size="2" face="Courier New">E:\Users\{username}\AppData\Local\JetBrains\Omea</font>, replacing what's there, then restarting you'll find all your feeds, subscriptions, clippings, etc. are there which was a nice thing. Now the problem is remembering which OS I can run Omea in so I don't lose any data!  <p>I wonder if there's a registry or file hack where the value is stored for the database path? Hmmm...  <p>UPDATE: I copied over the contents from the \User location in Vista to my data partition (<font size="2" face="Courier New">F:\Omea</font> ), updated the registry (<font size="2" face="Courier New">HKCU\Software\JetBrains\Omea</font>) values to <font size="2" face="Courier New">F:\Omea</font> , moved the folders in the \User location to the Recycle Bin then restarted Omea. Success!  <p><a href="http://geekswithblogs.net/jwatson/archive/2006/06/14/81877.aspx"><font size="1">Original post</font></a></p>  

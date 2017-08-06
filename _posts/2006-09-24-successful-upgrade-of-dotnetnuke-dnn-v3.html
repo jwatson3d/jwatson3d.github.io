@@ -1,0 +1,13 @@
+---
+layout: post
+title: Successful upgrade of DotNetNuke (DNN) v3 to v4
+date: '2006-09-24T18:55:00.000-04:00'
+author: John
+tags:
+- DotNetNuke
+modified_time: '2010-09-05T14:42:56.604-04:00'
+blogger_id: tag:blogger.com,1999:blog-2811308028656623966.post-2941460317721057018
+blogger_orig_url: http://pragmatic-software.blogspot.com/2006/09/successful-upgrade-of-dotnetnuke-dnn-v3.html
+---
+
+<p>This weekend I upgraded our hosted church <a href="http://www.rock-church.org/">site</a> to the current release of <a href="http://www.dotnetnuke.com/">DotNetNuke</a> v4.3.5. Here's a quick summary of the steps I took and some observations.  <p>Steps to upgrade:  <ol> <li>Unzip the <a href="http://prdownloads.sourceforge.net/dnn/DotNetNuke_4.3.5_Install.zip?download">install package</a> to a local directory.  <li>Copy release.config to web.config in the install root directory (local machine).  <li>Update the web.config: replace machine key with ours; comment out the SQL Express connection strings and uncomment the SQL standard strings; put in correct connecting string settings for the hosted site; uncomment trust level and change Medium to Full*; remove databaseOwner prefix.  <li>Backup hosted site to local machine using ftp client.  <li>Backup hosted database.  <li>Remove all files from root directory of hosted site.  <li>Remove all subdirectories except /Portals/0 which contains our site stuff.  <li>Ftp the site from local machine to hosted site.  <li>Switch the hosted site from ASP.NET 1.1 to 2.0  <li>Hit the hosted site for the first time - triggering an upgrade.</li></ol> <p>* Learned this after the fact - modules will not install since they're compiled on the fly and the zips are removed from the Install/Modules subdirectory. Full trust is needed to allow the ASP.NET application permission to read/load/delete the modules zips.  <p>One observation I noticed is with User Defined Tables. I have several with a date column in them. In V4, UDTs have been enhanced to support Date, Time, and Timestamp types. For whatever the reason, the decision was made to upgrade an old Date datatype to a Timestamp and the time portion defaults to 12:00:00. Why they chose to do this is beyond me. If all we had was a date before, why not keep the datatype as Date. Perhaps it's because the old Date datatype was in actuality a full timestamp. For me, it meant going in to edit the UDT settings for dozens of tables to switch from Timestamp to Date.  <p><a href="http://geekswithblogs.net/jwatson/archive/2006/09/24/92208.aspx"><font size="1">Original post</font></a></p>  

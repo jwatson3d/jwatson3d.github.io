@@ -1,0 +1,13 @@
+---
+layout: post
+title: Using the built-in searching features of the DataSet
+date: '2005-10-25T10:38:00.000-04:00'
+author: John
+tags:
+- General
+modified_time: '2010-09-05T12:38:35.188-04:00'
+blogger_id: tag:blogger.com,1999:blog-2811308028656623966.post-6527288536021703572
+blogger_orig_url: http://pragmatic-software.blogspot.com/2005/10/using-built-in-searching-features-of.html
+---
+
+<p>Mohammad Azam posted <a href="http://geekswithblogs.net/azamsharp/archive/2005/10/25/58026.aspx">Searching in the DataSet to save a Database trip</a> showing a simple technique for searching a DataSet. As he said "Then I asked myself why not search the DataSet instead of going to the Database." however the technique he showed was a hand-crafted, walk the rows approach that compared the column value in each row and, if they matched, he copied the row into a new DataTable instance. In the end he'd have a DataTable containing the matching rows. He may not be aware that DataTables are searchable already via the <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfsystemdatadatatableclassselecttopic.asp">DataTable.Select Method</a>. Here's a snippet from the MSDN docs showing how it would work...  <blockquote>string strExpr;<br>string strSort;<br>strExpr = "id &gt; 5";<br>// Sort descending by column named<br>CompanyName. strSort = "name DESC";<br>// Use the Select method to find all rows matching the filter.<br>DataRow[] foundRows = customerTable.Select( strExpr, strSort, DataViewRowState.Added );</blockquote> <p>Obviously, his example and my response both lack context of the problem being solved. If his goal was to return a DataTable then the array of DataRows isn't exactly what he needs. However, the search (filtering) technique is still valid for consideration even without context.</p> <p><a href="http://geekswithblogs.net/jwatson/archive/2005/10/25/58036.aspx"><font size="1">Original post</font></a></p>  

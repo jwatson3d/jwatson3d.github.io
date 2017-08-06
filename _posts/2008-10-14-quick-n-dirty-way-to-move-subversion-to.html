@@ -1,0 +1,13 @@
+---
+layout: post
+title: Quick 'n Dirty way to move Subversion to another machine
+date: '2008-10-14T15:54:00.000-04:00'
+author: John
+tags:
+- OSS
+modified_time: '2010-09-03T22:13:28.650-04:00'
+blogger_id: tag:blogger.com,1999:blog-2811308028656623966.post-2599952311252377660
+blogger_orig_url: http://pragmatic-software.blogspot.com/2008/10/quick-n-dirty-way-to-move-subversion-to.html
+---
+
+If you have an existing Subversion tree on disk somewhere and you wish to move it to another machine, here's a quick 'n dirty way to do it. I'm pretty sure I read this before somewhere but couldn't find it however I decided to try it anyway. Basically, you install the same version of Subversion onto the new server, create an identically named repository ("svnadmin create foo" - assuming "foo" is the name of the new repo), replace the contents of the "foo" directory from the original machine and voila.<br />Of course, this is no doubt unsupported - the proper way to move a repository to another location is <a href="http://svnbook.red-bean.com/en/1.5/svn.reposadmin.maint.html#svn.reposadmin.maint.migrate" target="_blank">documented here</a>.

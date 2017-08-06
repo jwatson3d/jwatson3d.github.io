@@ -1,0 +1,13 @@
+---
+layout: post
+title: DB2 UDB 7.1, JDBC, and NULLID.SYSSH200
+date: '2006-09-20T12:32:00.000-04:00'
+author: John
+tags:
+- SQL
+modified_time: '2010-09-05T14:43:07.756-04:00'
+blogger_id: tag:blogger.com,1999:blog-2811308028656623966.post-6584307960886183282
+blogger_orig_url: http://pragmatic-software.blogspot.com/2006/09/db2-udb-71-jdbc-and-nullidsyssh200.html
+---
+
+<p>This is an obscure problem which took a lot of digging. It was finally Roger Bjärevall's post <a href="http://www.dbvis.com/forum/thread.jspa?messageID=4050?">here</a> that lead to the answer. Roger is the developer of Minq Software's <a href="http://www.dbvis.com/">DB-Visualizer</a> which is a great utility for connecting to a variety of databases as I often do.  <p>The bottom line is you can't use Type 4 drivers to connect to DB2 7.1 so <a href="http://www14.software.ibm.com/webapp/download/preconfig.jsp?id=2004-09-20+10%3A09%3A21.003415R&amp;cat=database&amp;fam=&amp;s=c&amp;S_TACT=104AH%20W42&amp;S_CMP=">this</a> one won't work. You have to configure the connection using the one installed with DB2 (\SQLLIB\java\db2java.zip). I got that far pretty easily. However, you need to specify the 'com.ibm.db2.jdbc.net.DB2driver' for the connection which isn't the first in the list of drivers. It was Roger's casual post that made it come together and finally work! Thanks for the tip and the great little product that's reasonably priced (remember when TOAD was cheap before Quest jacked the price up through the roof??).  <p><a href="http://geekswithblogs.net/jwatson/archive/2006/09/20/91747.aspx"><font size="1">Original post</font></a></p>  

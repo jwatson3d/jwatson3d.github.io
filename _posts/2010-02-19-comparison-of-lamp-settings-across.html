@@ -1,0 +1,14 @@
+---
+layout: post
+title: Comparison of LAMP settings across Linux distros
+date: '2010-02-19T13:17:00.000-05:00'
+author: John
+tags:
+- Linux
+- OSS
+modified_time: '2010-09-04T10:22:05.649-04:00'
+blogger_id: tag:blogger.com,1999:blog-2811308028656623966.post-608021286894779119
+blogger_orig_url: http://pragmatic-software.blogspot.com/2010/02/comparison-of-lamp-settings-across.html
+---
+
+<p>I’ve been using SUSE quite a bit lately and before this current job it was CentOS (a.k.a. RedHat) all the time. With my recent adoption of Drupal for our church’s website I also found myself playing around with WAMP as well. There are plenty of HOWTOs on each distro as well as forums and discussion threads that answer specific questions on where things are located, defaults, commands for restarts, etc. but I haven’t come across a simple comparison chart so here’s my attempt:</p> <table border="0" cellspacing="0" cellpadding="2"> <tbody> <tr> <td valign="top">&nbsp;</td> <td valign="top"><strong>CentOS 5.3</strong> </td> <td valign="top"><strong>SUSE 11.2</strong> </td> <td valign="top"><strong>WAMP 2.0c</strong> </td></tr> <tr> <td valign="top">Apache ver.</td> <td valign="top">2.2.3</td> <td valign="top">2.2.1.13</td> <td valign="top">2.2.8</td></tr> <tr> <td valign="top">http.conf</td> <td valign="top">/etc/httpd/conf/httpd.conf</td> <td valign="top">/etc/apache2/httpd.conf <br>/etc/sysconfig/apache2</td> <td valign="top">C:\wamp\bin\apache\apache2.2.8\conf</td></tr> <tr> <td valign="top">Apache commands</td> <td valign="top">apachectl&nbsp; start|stop|restart|status <br>/etc/init.d/apache2 start|stop|restart|status</td> <td valign="top">rcapache2&nbsp; start|stop|restart|status <br>/etc/init.d/apache2start|stop|restart|status</td> <td valign="top">{use tray applet}</td></tr> <tr> <td valign="top">Apache docRoot</td> <td valign="top">&nbsp;</td> <td valign="top">/srv/www/htdocs</td> <td valign="top">C:\wamp\www</td></tr> <tr> <td valign="top">MySQL ver.</td> <td valign="top">5.0.77</td> <td valign="top">5.1.36</td> <td valign="top">5.0.51b</td></tr> <tr> <td valign="top">PHP 5 ver.</td> <td valign="top">5.2.9</td> <td valign="top">5.3.0</td> <td valign="top">5.2.6</td></tr> <tr> <td valign="top">php.ini</td> <td valign="top">/etc/php.ini</td> <td valign="top">/etc/php5/apache2/php.ini</td> <td valign="top">C:\wamp\bin\apache\apache2.2.8\bin</td></tr></tbody></table>  

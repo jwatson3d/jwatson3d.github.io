@@ -1,0 +1,13 @@
+---
+layout: post
+title: How to hack MDAC 2.8 off of a machine
+date: '2006-06-23T12:31:00.000-04:00'
+author: John
+tags:
+- General
+modified_time: '2010-09-05T14:43:22.496-04:00'
+blogger_id: tag:blogger.com,1999:blog-2811308028656623966.post-5221279314937055265
+blogger_orig_url: http://pragmatic-software.blogspot.com/2006/06/how-to-hack-mdac-28-off-of-machine.html
+---
+
+<p>I can't take credit for this as I found the tip <a href="http://webdoc.zoovy.com/load.php?area=ordermgr&amp;sub=guide&amp;file=mdac.php&amp;title=MDAC_Troubleshooting_Guide">here</a>. Basically the preferred method is to have the MDAC installer for what you want *removed* and using a couple of less-known setup switches:  <ol> <li>use the /T switch to specify a temporary folder to extract the files in the setup  <li>use the /C switch to only copy the files out</li></ol> <p>Also, it's good to use the <a href="http://www.microsoft.com/downloads/details.aspx?FamilyId=8F0A8DF6-4A21-4B43-BF53-14332EF092C9&amp;displaylang=en">MDAC Component Checker</a> to verify which version you have installed. Then grab the standalone installer for that version, unpack it, run the uninstall, reboot and you're good to go.  <p>I downloaded the mdac_typ.exe and used a command prompt to execute the following:  <p>mdac_typ /t:C:\mdac /c  <p>I then switched to the C:\mdac directory just created and executed the following to uninstall:  <p>dasetup /u  <p>I happened to be running this on a Windows 2000 machine and after the reboot Windows Protection kicked in and tried to restore stuff. I cancelled it then tried Component Checker again and promptly got an error because MSXML wasn't installed. I then ran the install for the version of MDAC I wanted (2.7 SP1 Refresh). After it finished, I tried Component Checker again and it told me that version of MDAC installed was indeed 2.7 SP1 Refresh.  <p>As with any undocumented hacks like this, your mileage may vary.  <p><a href="http://geekswithblogs.net/jwatson/archive/2006/06/23/82846.aspx"><font size="1">Original post</font></a></p>  

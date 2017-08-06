@@ -1,0 +1,13 @@
+---
+layout: post
+title: Beware Virtual PC Differencing Disks!
+date: '2005-05-09T12:45:00.000-04:00'
+author: John
+tags:
+- Virtualization
+modified_time: '2010-09-04T21:01:10.380-04:00'
+blogger_id: tag:blogger.com,1999:blog-2811308028656623966.post-6485833051471034663
+blogger_orig_url: http://pragmatic-software.blogspot.com/2005/05/beware-virtual-pc-differencing-disks.html
+---
+
+<p>Ah, now that I have your attention, please let me elaborate :)  <p>I just read a post by Russ Nemhauser, <a href="http://weblogs.asp.net/russnem/archive/2005/04/27/404856.aspx">Virtual PC - Beyond the Basics</a>, and it reminded me of some caveats I had picked up in my trials. I too thought differencing disks were the way to go and in fact set up several “base” installs to test it out. One of my early reasonings was simply because each .vhd image had about 1 - 2 gigs of duplicate information - that is, a base OS plus tools and assorted service packs. I figured I could free up 10 gigs or so with a single base image.  <p>The reality is that the differencing drives quickly grew to 3 - 4 gigs in size themselves! Considering things like the paging file, event logs, IIS logs, temp directories, etc. it made sense why this was. However, in the long run I ended up using just as much disk space if not more as if I stuck with individual images. Plus it meant I had to remember to always cart along the base image or the differencing image was useless. Yes, I know about the new compacting tool but it's waaayyy too hard to do all this for each image to free up space - just check out these posts by <a href="http://blogs.technet.com/jhoward/archive/2005/04/24/404096.aspx">John Howard</a> and <a href="http://blog.throbs.net/archive/0001/01/01/160.aspx">Rob Eberhardt</a>.  <p>In the end I stuck with having a single baseline image of an OS which I copy and rename to start a new image. I followed Megan's tips on <a href="http://blogs.technet.com/megand/archive/2005/01/20/357576.aspx">sysprepping virtual machines</a> with the baseline beforehand. This does mean that a new service pack might have to be rolled out to multiple virtual machine images but I would have to do that anyway with differencing drives since the base drive cannot be touched ever again or the differences become invalidated and meaningless.  <p><a href="http://geekswithblogs.net/jwatson/archive/2005/05/09/39274.aspx"><font size="1">Original post</font></a></p>  
