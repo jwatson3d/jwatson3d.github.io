@@ -8,8 +8,6 @@ I've been a software guy for the last three decades working on a variety of comp
 
 It has also been incumbent on me to change in order to stay gainfully employed. What I learned and used for technologies five, ten or fifteen years ago is not what I am currently using at the moment. Below you'll see what is now considered "ancient equipment" but at the time I learned to be proficient using it. As the technology evolved so did I. This approach is what it takes to continue working in the technology field.
 
-Even blogging and online posting has changed. When I started in 2004 I used [Geeks with Blogs](http://geekswithblogs.net/jwatson/Default.aspx) later moving on to [Blogger](http://pragmatic-software.blogspot.com/) in 2008. Fast forward to 2017 and I'm now working with GitHub pages using [Jekyll](https://jekyllrb.com/) for static website generation.
-
 Here's a look at the various platforms and programming languages I've used and developed for:
 
 <hr/>

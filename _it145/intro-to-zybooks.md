@@ -4,8 +4,15 @@ title:  "Introduction to zyBooks"
 date:   2016-10-22 18:00:00
 categories: edu snhu it145
 ---
+Contents
+* TOC
+{:toc}
+<hr/>
+
 # Overview
 These notes are intended to help you quickly become productive using the <a href="https://zybooks.zyante.com">zyBooks</a> resource.
+<hr/>
+
 # Participation
 Unlike traditional printed textbooks, the interactive nature of zyBooks requires that you, the reader, participate in the learning material. If you skip sections because you’re in a rush, you will not receive credit towards participation. Throughout the chapters you will encounter Participation Activities that require you to input values, answer questions, or click through animations in order to fully learn the material.
 
@@ -20,6 +27,7 @@ After completing all the steps you’ll see the Participation “badge” on the
 
 #### Participation Afterward
 <img src="/img/it145-zybooks-part-award.png">
+<hr/>
 
 # Lab Activities
 zyBooks has an interesting feature allowing you to type the program source for a lab activity right inside the book on the website. When you click “Run Program” that source will be compiled and executed right there in the page. In fact, it will execute your program several times with different inputs and then examine the output produced when calculating your grade.
