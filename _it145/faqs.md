@@ -13,22 +13,25 @@ categories: edu snhu it145
 <hr/>
 
 # I had some difficulty _[insert reason here]_ and I just now finished a zyBooks assignment but my grades still aren't updated in Blackboard.
-> Once a week is over and I pull the activity reports for that week I don't keep going back to earlier weeks to see if something has changed or work as been completed late. If you wish to have your late work reviewed, you must email me and specify which assignments you'd like me to go back and look at.
+> Once a week is over and I have pulled the activity reports for that week I don't keep going back to earlier weeks to see if something has changed or work as been completed late. If you wish to have your late work reviewed, you must email me and specify which assignments you'd like me to go back and look at.
 <hr/>
 
 # When I run a program in zyBooks I keep getting `EOFError: EOF when reading a line`.
 > Most likely the program you are attempting to run is expecting or prompting for some value to be input. If so, did you type the input values into the text box titled “Enter program input (optional)” right beneath the “RUN PROGRAM” button _**before**_ you clicked “RUN PROGRAM”?<br/><br/>
-Web pages aren’t interactive like a program running on your computer. Instead, they use what is called a "request-response" model for interaction. That is, when you click a button on a web page the web page and anything you typed (in our case the program you are trying to run) is sent to the zyBooks server to be processed - the "request". This means the program you are typing in is actually run on the zyBooks server and the output from that is then sent back to your web browser - the "response". This is why the zyBooks page has a separate text box for you to supply the input values that will be used when running the program - those values are also sent to the zyBooks web server along with your program source code that you typed in and  together that information is used to run the program.
+Web pages aren’t interactive like a program running on your computer. Instead, they use what is called a "request-response" model for interaction. That is, when you click a button on a web page the web page and anything you typed (in our case the program you are trying to run) is sent to the zyBooks server to be processed - the "request". This means the program you are typing in is actually run on the zyBooks server and the output from that is then sent back to your web browser - the "response". This is why the zyBooks page has a separate text box for you to supply the input values that will be used when running the program - those values are also sent to the zyBooks web server along with your program source code that you typed in and  together that information is used to run the program.<br/><br/>
+Now might be a good time to review [Introduction to zyBooks](/it145/intro-to-zybooks/)
 <hr/>
 
 # I still am getting errors even though I can see the output right there.
-> It's probably a minor typo but remember, computers are very binary - ones and zeros, black and white. Look for any yellow highlights in the output area. Each highlight box marks the exact spot of a problem - check your spacing and remember that "whitespace" counts. If you see a little bent arrow pointing down to the left it means there is but shouldn't or should be but isn't a carriage return (line feed). You'll have to compare `Your output` to the `Expected output` right below and then change your code so your output exactly matches what is expected.
+> It's probably a minor typo however remember that computers are very binary - ones and zeros, black and white, no gray areas. Either the output matches perfectly or it doesn't. Look for any yellow highlights in the output area. Each highlight box marks the exact spot of a problem - check your spacing and remember that "whitespace" counts. If you see a little bent arrow pointing down to the left it means there is a problem with your linefeeds. Did you use `println()` instead of `print()` or vice-versa? You'll have to compare `Your output` to the `Expected output` right below and then change your code so your output exactly matches what is expected.
 <hr/>
 
 # When I upload my program to zyBooks lab activity then submit it I keep getting `Exception in thread "main" java.lang.NoClassDefFoundError: PaintEstimator (wrong name: paintestimator/PaintEstimator) at java.lang.ClassLoader.defineClass1`
 > 1. Your class name inside the source code is not what zyBooks expects, e.g. `public class PaintEstimator`
 > 2. Your source code includes a package statement near the top, e.g.<br/>
->  `package paintestimator;` Delete or comment out the package statement, save and then re-upload to zyBooks. While you haven't learned this yet, including a package name in Java changes the full name of a class, e.g. from `PaintEstimator` to `paintestimater/PaintEstimator` which zyBooks cannot handle. You can also avoid this by deleting the default package name in the NetBeans wizard and just specify the class name you wish.
+>  `package paintestimator;` Delete or comment out the package statement, save and then re-upload to zyBooks. While you haven't learned this yet, including a package name in Java changes the full name of a class, e.g. from `PaintEstimator` to `paintestimater/PaintEstimator` which zyBooks cannot handle. You can also avoid this by deleting the default package name in the NetBeans wizard and just specify the class name you wish.<br/><br/>
+Now might be a good time to review [NetBeans Quick Start](/it145/netbeans-quick-start/)
+
 <hr/>
 
 # How can I read a file located in the current directory?
@@ -36,8 +39,10 @@ Web pages aren’t interactive like a program running on your computer. Instead,
 > ```
 > URL path = YourClassNameHere.class.getResource(filename);
 > File file = new File(path.toURI());
+> 
 > // FileReader reads text files in the default encoding.
 > FileReader fileReader = new FileReader(file);
+> 
 > // Always wrap FileReader in BufferedReader to improve throughput.
 > BufferedReader bufferedReader = new BufferedReader(fileReader);
 > ```
@@ -51,7 +56,7 @@ Web pages aren’t interactive like a program running on your computer. Instead,
 >    System.out.println(line);
 > }
 > ```
-> Notice that the `while` statement is doing "double-duty". The inner statement `line = bufferedReader.readLine()` is reading a line from the buffered reader class and storing it in the string variable `line`. When there are no more lines to be read then the result will be `null` making the while condition true and the loop exits.
+> Notice that the `while` statement is doing "double-duty". The inner statement `line = bufferedReader.readLine()` is using the buffered reader class to read a line from the text file and store it in the string variable `line`. When there are no more lines to be read then the result will be `null` making the while condition false and the loop exits.
 <hr/>
 
 # Can I use `print` statements in my code to help with debugging?
@@ -63,4 +68,4 @@ Web pages aren’t interactive like a program running on your computer. Instead,
 > 3. [Debugging Java Applications](https://netbeans.org/project_downloads/usersguide/nbfieldguide/Chapter5-Debugging.pdf) (from the NetBeans User Guide)
 > 4. [Video of using the Visual Debugger in the NetBeans IDE](https://netbeans.org/kb/docs/java/debug-visual-screencast.html)
 
->I'm sure there are dozens of videos on YouTube although I'd suggest looking for ones where the speaker uses reasonably understandable English diction - some are incredibly difficult to understand.
+>I'm sure there are dozens of videos on YouTube although I'd suggest looking for ones where the speaker uses reasonably understandable English diction - some are incredibly difficult to follow.
