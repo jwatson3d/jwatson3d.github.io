@@ -28,11 +28,12 @@ pagination:
 {% endfor %}
 
 {% if paginator.total_pages > 1 %}
+<br/>
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">&lt;&lt; Newer</a>
   {% endif %}
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older &gt;&gt;</a>
   {% endif %}
 {% endif %}
 
