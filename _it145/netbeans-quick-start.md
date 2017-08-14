@@ -74,7 +74,7 @@ Most importantly, if you forget to remove that package name portion you will hav
 
 - You can make your project name something different from the Java class name, such as “Lab 1.13” (with a blank space after “Lab”) for a project name and “OutputWithVars” for the class name (no blank spaces between words).
 
-- The project name is used as the folder (directory) name on your computer. Inside that folder you’ll find a “src” folder that contains all the Java source files used in the project:<br/>{% include gal.html image="it145-netBeans-project-source.png" %}
+- The project name is used as the folder (directory) name on your computer. Inside that folder you’ll find a “src” folder that contains all the Java source files used in the project:<br/>{% include gal.html image="it145-netbeans-project-source.png" %}
 
 <br/>
 # Running A Program
