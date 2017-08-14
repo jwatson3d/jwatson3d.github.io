@@ -13,6 +13,7 @@ categories: edu snhu it145
 - [Commenting in Java](https://www.clear.rice.edu/comp310/JavaResources/comments.html)
 
 # Pseudocode
+- [IT-145 Guide to Pseudocode](http://snhu-media.snhu.edu/files/course_repository/undergraduate/it/it145/it145_guide_to_pseudocode.pdf)
 - [How to Write Pseudocode](http://www.wikihow.com/Write-Pseudocode)
 - [Dr. John Dalbey's Pseudocode Standard](http://users.csc.calpoly.edu/~jdalbey/SWE/pdl_std.html)
 - [Dr. Tim Bell's Pseudocode Tutorial and Exercises](http://www.cosc.canterbury.ac.nz/tim.bell/dt/Tutorial_Pseudocode.pdf)
@@ -27,7 +28,17 @@ categories: edu snhu it145
 - [Margret Posch's Nested Loops Example](https://www.youtube.com/watch?v=ZcTgmKtvSQ4)
 - [The Coding Train Nested Loops Processing Tutorial](https://www.youtube.com/watch?v=H7frvcAHXps)
 
-# Miscellaneous
+# NetBeans
+- [NetBeans IDE 8.2 Installation Instructions](https://netbeans.org/community/releases/82/install.html)
 - [NetBean's IDE Java Quickstart Tutorial](https://netbeans.org/kb/docs/java/quickstart.html)
+- [Dr. Christian Murphy's NetBeans IDE Tutorials:](http://www.cs.columbia.edu/~cmurphy/summer2008/1007/netbeans/index.html)
+  - [Introduction](http://www.cs.columbia.edu/~cmurphy/summer2008/1007/netbeans/1_intro.html)
+  - [Download and Installation](http://www.cs.columbia.edu/~cmurphy/summer2008/1007/netbeans/2_install.html)
+  - [Creating a New Project](http://www.cs.columbia.edu/~cmurphy/summer2008/1007/netbeans/3_newproject.html)
+  - [Compiling and Running Your Project](http://www.cs.columbia.edu/~cmurphy/summer2008/1007/netbeans/4_compile.html)
+  - [Adding Another Java Class to a Project](http://www.cs.columbia.edu/~cmurphy/summer2008/1007/netbeans/5_newclasses.html)
+  - [Debugging in NetBeans](http://www.cs.columbia.edu/~cmurphy/summer2008/1007/netbeans/7_debugging.html)
+
+# Miscellaneous
 - [Roedy Green's Java Cheat Sheet](http://mindprod.com/jgloss/jcheat.html)
 - [Roedy Green's Java and Internet Glossary](http://mindprod.com/jgloss/jgloss.html) &lt;-- huge content archive, you can waste hours here!!
