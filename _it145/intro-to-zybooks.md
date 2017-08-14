@@ -3,7 +3,30 @@ layout: post
 title:  "Introduction to zyBooks"
 date:   2016-10-22 18:00:00
 categories: edu snhu it145
+imgfolder: /img/introzybooks
+images:
+  - name: it145-zybooks-lab-1.10.1-input.png
+    thumb: it145-zybooks-lab-1.10.1-input_tn.jpg
+    text: Program Input
+    width: 573
+    height: 718
+  - name: it145-zybooks-lab-1.10.1-output.png
+    thumb: it145-zybooks-lab-1.10.1-output_tn.jpg
+    text: Program Output
+    width: 679
+    height: 700
+  - name: it145-zybooks-part-before.png
+    thumb: it145-zybooks-part-before_tn.jpg
+    text: Participation Beforehand
+    width: 816
+    height: 604
+  - name: it145-zybooks-part-award.png
+    thumb: it145-zybooks-part-award_tn.jpg
+    text: Participation Awarded
+    width: 602
+    height: 807
 ---
+{% include galheader.html %}
 Contents
 * TOC
 {:toc}
@@ -19,14 +42,14 @@ Unlike traditional printed textbooks, the interactive nature of zyBooks requires
 Here is an example of a Participation Activity before you interact with the material:
 
 #### Participation Beforehand
-<img src="/img/it145-zybooks-part-before.png">
+{% include gal.html image="it145-zybooks-part-before.png" %}
 
 By clicking the orange “Start” button inside the box, you can click through the steps and watch the animations build up the material.
 
 After completing all the steps you’ll see the Participation “badge” on the left colored in:
 
 #### Participation Afterward
-<img src="/img/it145-zybooks-part-award.png">
+{% include gal.html image="it145-zybooks-part-award.png" %}
 <hr/>
 
 # Lab Activities
@@ -34,8 +57,8 @@ zyBooks has an interesting feature allowing you to type the program source for a
 
 Because the program is executed within the textbook environment, you have to provide all the inputs needed prior to running the program. This is a different experience than when you write, compile and execute a program outside of ZyBooks on your computer, e.g. using NetBeans.
 
-<img src="/img/it145-zybooks-lab-1.10.1-input.png">
+{% include gal.html image="it145-zybooks-lab-1.10.1-input.png" %}
 
 Here’s an example output showing the results of running the program
 
-<img src="/img/it145-zybooks-lab-1.10.1-output.png">
+{% include gal.html image="it145-zybooks-lab-1.10.1-award.png" %}
