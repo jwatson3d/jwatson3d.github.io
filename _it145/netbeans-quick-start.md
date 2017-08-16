@@ -25,8 +25,8 @@ images:
     text: Default Package
     width: 958
     height: 504
-  - name: it145-netBeans-project-source.png
-    thumb: it145-netBeans-project-source_tn.jpg
+  - name: it145-netbeans-project-source.png
+    thumb: it145-netbeans-project-source_tn.jpg
     text: Project Source
     width: 583
     height: 183
