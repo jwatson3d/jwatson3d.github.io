@@ -6,7 +6,7 @@ permalink: /about/
 
 I've been a software guy for the last three decades working on a variety of computing platforms and technologies. The one constant in technology is change and it is happening faster and faster. One way I try to manage the rapid changes is by being pragmatic towards what is really necessary, what is nice to have, and what is interesting but not practical at the moment.
 
-It has also been incumbent on me to change in order to stay gainfully employed. What I learned and used for technologies five, ten or fifteen years ago is not what I am currently using at the moment. Below you'll see what is now considered "ancient equipment" but at the time I learned to be proficient using it. As the technology evolved so did I. This approach is what it takes to continue working in the technology field.
+It has also been incumbent on me to change in order to stay gainfully employed. What I learned and used for technologies five, ten or fifteen years ago is not what I am currently using at the moment. Below you'll see what is now considered "ancient equipment" but at the time I learned to be proficient using it. As the technology evolved so did I. Note that in the first decade of my career there were no less than six distinct computing platforms, although the first two and the next four shared similar architectures. Leveraging what you know to move into other technologies is one way to move through this field.
 
 Here's a look at the various platforms and programming languages I've used and developed for:
 
