@@ -25,6 +25,11 @@ images:
     text: Participation Awarded
     width: 602
     height: 807
+  - name: it145-zybooks-lab-1.13.1-hints.png
+    thumb: it145-zybooks-lab-1.13.1-hints_tn.jpg
+    text: Hints
+    width: 1079
+    height: 1167
 ---
 {% include galheader.html %}
 Contents
@@ -59,6 +64,17 @@ Because the program is executed within the textbook environment, you have to pro
 
 {% include gal.html image="it145-zybooks-lab-1.10.1-input.png" %}
 
-Here’s an example output showing the results of running the program
+Here’s an example output showing the results of running the program:
 
-{% include gal.html image="it145-zybooks-lab-1.10.1-award.png" %}
+{% include gal.html image="it145-zybooks-lab-1.10.1-output.png" %}
+
+#### Suggested Approach
+Learn to code and test in small bites - don't try typing in the entire program and run it afterwards. The likelihood of too many typos and mistakes will cause a long, cascading list of errors to correct.
+
+{% include gal.html image="it145-zybooks-lab-1.13.1-hints.png" %}
+
+In the example shown above, code just enough to satisfy the requirements of part (1) and then test it - key in sample input values and click "Run Program". Ensure that the output from your program matches the sample output shown in the shaded gray box.
+
+This clip succinctly summarizes the accumulated wisdom of experienced programmers. If you follow this advice you'll be far less frustrated and more productive:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Yl6s6DGapug" frameborder="0" allowfullscreen></iframe>
