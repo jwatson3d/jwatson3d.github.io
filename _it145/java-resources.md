@@ -14,6 +14,7 @@ categories: edu snhu it145
 
 # Pseudocode
 - [IT-145 Guide to Pseudocode](http://snhu-media.snhu.edu/files/course_repository/undergraduate/it/it145/it145_guide_to_pseudocode.pdf)
+- [Introduction to Pseudocode](https://www.slideshare.net/DamianGordon1/pseudocode-10373156)
 - [How to Write Pseudocode](http://www.wikihow.com/Write-Pseudocode)
 - [Dr. John Dalbey's Pseudocode Standard](http://users.csc.calpoly.edu/~jdalbey/SWE/pdl_std.html)
 - [Dr. Tim Bell's Pseudocode Tutorial and Exercises](http://www.cosc.canterbury.ac.nz/tim.bell/dt/Tutorial_Pseudocode.pdf)
