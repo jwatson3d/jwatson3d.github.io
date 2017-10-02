@@ -18,9 +18,19 @@ Contents
 <hr/>
 
 # Overview
-While there are many examples of file input/output in Java, they tend to only show snippets of code which can hide the big picture. This sample is a full Java console application that showcases several techniques including using buffered I/O to read an entire line of text at a time, character I/O to read a single character at a time, building a file path using the current location where the program is running as well as using object-oriented inheritance to implement the file logic.
+While there are many examples of file input/output in Java, they tend to only show snippets of code which can hide the big picture. This sample is a full Java console application that showcases several techniques including:
+
+1. Creating a menu and prompting the user for a choice
+2. Creating and using separate classes to manage the file logic
+3. Using buffered I/O to read an entire line of text at a time
+4. Using character I/O to read a single character at a time
+5. Splitting a text line into an array of strings (a.k.a. "parsing")
+5. Building a file path using the current location where the program is running.
 
 The key takeaway can been quickly seen by comparing the `readFile()` methods of the two classes. In one sense, everything else is "fluff" - creating a menu, prompting and validating for input, determining the correct path to the sample file, opening the files and preparing the variables. The meat of these two classes resides in the read logic.
+
+# Source Code
+Source code used in this article can be downloaded here: [FileSample.zip](/src/it145/FileSample.zip).<br />Both NetBeans and IntelliJ project files are included so you can easily open, compile, debug and step through the code to help you analyze and understand what it is doing. Neither IDE is required to view and compile this sample - a text editor program such as NotePad++, Atom, Sublime Text, or BBEdit can be used as well.
 
 # Sample Data
 I used the website [Mockaroo](https://www.mockaroo.com/) to generate ten random records to be used for this sample:
@@ -38,8 +48,7 @@ id,first_name,last_name,email,gender,ip_address
 10,Cleon,Camillo,ccamillo9@sciencedaily.com,Male,101.182.4.109
 ```
 
-# Source Code
-Source code used in this article can be downloaded here: [FileSample.zip](/src/it145/FileSample.zip). Both NetBeans and IntelliJ project files are included so you can easily open, compile, debug and step through the code to help analyze and understand what it is doing.
+Notice that each line of the text file represents a single "record" of related information for a ficticious person. The lines contain commas to separate the individual fields and the first line contains the field names or column headings if you think of it in spreahsheet terms. This formatting with the file is what is known as comma-separated values or CSV.
 
 # Pseudocode
 This file sample application displays a simple menu on the console, waits for the user to select an option and then performs the requested operation.
@@ -86,12 +95,13 @@ CLASS CharacterIO
             READ a character from file
             IF character is newline
                 DISPLAY fields in column format
+                SET fieldNumber to zero for first field in a line
             ELSE IF character is carriage return
                 ignore and loop again
             ELSE IF character is a comma
-                increment fieldNumber to next field
+                INCREMENT fieldNumber to next field
             ELSE
-                append character to current field
+                APPEND character to current field
             END IF
         END LOOP
         CLOSE file
