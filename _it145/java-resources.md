@@ -29,6 +29,10 @@ categories: edu snhu it145
 - [Margret Posch's Nested Loops Example](https://www.youtube.com/watch?v=ZcTgmKtvSQ4)
 - [The Coding Train Nested Loops Processing Tutorial](https://www.youtube.com/watch?v=H7frvcAHXps)
 
+# Coding Practice Sites/Apps
+- [Coding Game](https://www.codingame.com)
+- [SoloLearn](https://www.sololearn.com/)
+
 # NetBeans
 - [NetBeans IDE 8.2 Installation Instructions](https://netbeans.org/community/releases/82/install.html)
 - [NetBean's IDE Java Quickstart Tutorial](https://netbeans.org/kb/docs/java/quickstart.html)
