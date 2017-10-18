@@ -49,6 +49,14 @@ Now might be a good time to review [NetBeans Quick Start](/it145/netbeans-quick-
 > Of course, _**YourClassNameHere**_ should be replaced with the name of your Java class that this code is placed in.
 <hr/>
 
+# I'm getting a `Exception in thread "main" java.io.FileNotFoundException`
+> First, let's clarify the simplest solution - did you download and name the file correctly as compared to what your program is looking for? Second, where is the file located either on your computer harddrive or relative to the project folders? The quickest, dirtiest, least elegant solution is to hardcode the exact full path to where the file is such as "C:\\Users\\John\\Documents\\IT-145\\FinalProject\\animals.txt". Note the double backslashes - this is called "escaping" the character. You could also use the Unix-style syntax of forward-slash so you don't have to escape it "C:/Users/John/Documents/IT-145/FinalProject/animals.txt". Of course, I made up (guessed) that path so you'll have to substitute the actual path on your computer.
+> 
+> The "problem" with hardcoding the full path is that if the file is moved to another location you'll have to change the source code and recompile the program before it works again. It also is highly unlikely that another computer will be exactly the same - for example, I use a MacBook and my computer username may not be John.
+> 
+> This problem can be more elegantly overcome by reading the FAQ just above this one or by reading the [File I/O article](http://blog.pragmatictech.guru/it145/file-io-sample/) I wrote detailing lots of techniques - see the `prepareFile()` method.
+<hr/>
+
 # How can I read and process the lines of a text file?
 > This tutorial covers the basics of reading text files...[Reading and Writing Files in Java](https://www.caveofprogramming.com/java/java-file-reading-and-writing-files-in-java.html)<br />The essence of the technique is this:<br />
 > ```
