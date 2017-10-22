@@ -26,7 +26,7 @@ Now might be a good time to review [Introduction to zyBooks](/it145/intro-to-zyb
 > It's probably a minor typo however remember that computers are very binary - ones and zeros, black and white, no gray areas. Either the output matches perfectly or it doesn't. Look for any yellow highlights in the output area. Each highlight box marks the exact spot of a problem - check your spacing and remember that "whitespace" counts. If you see a little bent arrow pointing down to the left it means there is a problem with your linefeeds. Did you use `println()` instead of `print()` or vice-versa? You'll have to compare `Your output` to the `Expected output` right below and then change your code so your output exactly matches what is expected.
 <hr/>
 
-# When I upload my program to zyBooks lab activity then submit it I keep getting `Exception in thread "main" java.lang.NoClassDefFoundError: PaintEstimator (wrong name: paintestimator/PaintEstimator) at java.lang.ClassLoader.defineClass1`
+# When I upload my program to zyBooks lab activity then submit it I keep getting `Exception in thread "main" java.lang.NoClassDefFoundError...`
 > 1. Your class name inside the source code is not what zyBooks expects, e.g. `public class PaintEstimator`
 > 2. Your source code includes a package statement near the top, e.g.<br/>
 >  `package paintestimator;` Delete or comment out the package statement, save and then re-upload to zyBooks. While you haven't learned this yet, including a package name in Java changes the full name of a class, e.g. from `PaintEstimator` to `paintestimater/PaintEstimator` which zyBooks cannot handle. You can also avoid this by deleting the default package name in the NetBeans wizard and just specify the class name you wish.<br/><br/>
