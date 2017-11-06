@@ -177,7 +177,7 @@ public class FileSample {
                     BufferedInput bufferedInput = new BufferedInput(filename);
                     bufferedInnput.readFile();
                     break;
-                case 2:
+                case 3:
                     ScannerInput bcannerInput = new ScannerInput(filename);
                     scannerInnput.readFile();
                     break;
@@ -241,31 +241,31 @@ The elegance of the psuedocode can mask some of the gory, low-level details that
 I created the `prepareFile()` method to keep the setup logic together and designed it to return a boolean value indicating whether or not the setup was successful, i.e. the file is ready to be read. The credit for this logic belongs to [Joel Westberg's answer](http://stackoverflow.com/a/10830715) posted on StackOverflow.
 
 ```java
-    /**
-     * Prepares a File instance using the supplied filename
-     *
-     * @return 'true' if the file is prepared for use
-     */
-    private boolean prepareFile() {
+/**
+ * Prepares a File instance using the supplied filename
+ *
+ * @return 'true' if the file is prepared for use
+ */
+private boolean prepareFile() {
 
-        // Determine the correct path location for the file
-        // see: http://stackoverflow.com/a/10830715
-        URL path = BufferedIO.class.getResource(filename);
-        if (path == null) {
-            err.format("File not found!! Unable to continue.\n%s", filename);
-            return false;
-        }
-
-        // try to create a File instance using the calculated path
-        try {
-            file = new File(path.toURI());
-        } catch (URISyntaxException ex) {
-            err.format("IOException: %s%n", ex);
-            return false;
-        }
-
-        return true;
+    // Determine the correct path location for the file
+    // see: http://stackoverflow.com/a/10830715
+    URL path = BufferedIO.class.getResource(filename);
+    if (path == null) {
+        err.format("File not found!! Unable to continue.\n%s", filename);
+        return false;
     }
+
+    // try to create a File instance using the calculated path
+    try {
+        file = new File(path.toURI());
+    } catch (URISyntaxException ex) {
+        err.format("IOException: %s%n", ex);
+        return false;
+    }
+
+    return true;
+}
 ```
 
 
@@ -282,41 +282,41 @@ The next action (creating a `File` instance) causes the program to attempt to ac
 The `readFile()` method most closely mimics the pseudocode which is not uncommon. When programmers think of the logic needed to handle a task, such as reading and processing data from a file, they focus on those specific steps while glossing over all the other details necessary. As this program shows, the "guts" of the read logic are almost trivial and uninteresting once all the preparations are made - obtaining the correct path to the file, verifying that the file exists, preparing the `File` class as well as the `FileReader` class.
 
 ```java
-    /**
-     * Reads the selected file and prints the contents
-     */
-    public void readFile() {
+/**
+ * Reads the selected file and prints the contents
+ */
+public void readFile() {
 
-        // define a String to hold each line read from file
-        String line;
+    // define a String to hold each line read from file
+    String line;
 
-        // if able to open the file
-        if (prepareFile()) {
+    // if able to open the file
+    if (prepareFile()) {
 
-            try {
+        try {
 
-                // open the file and position to the start
-                FileReader fileReader = new FileReader(file);
+            // open the file and position to the start
+            FileReader fileReader = new FileReader(file);
 
-                // Always wrap FileReader in BufferedReader to improve throughput.
-                BufferedReader bufferedReader = new BufferedReader(fileReader);
+            // Always wrap FileReader in BufferedReader to improve throughput.
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
 
-                // now loop and print each remaining line
-                while ((line = bufferedReader.readLine()) != null) {
-                    fields = line.split(",");
-                    out.println(String.format(format, fields[0], fields[1], fields[2], fields[3]));
-                }
-
-                // always close the file
-                bufferedReader.close();
-
-            } catch (FileNotFoundException ex) {
-                err.format("FileNotFoundException: %s%n", ex);
-            } catch (IOException ex) {
-                err.format("IOException: %s%n", ex);
+            // now loop and print each remaining line
+            while ((line = bufferedReader.readLine()) != null) {
+                fields = line.split(",");
+                out.println(String.format(format, fields[0], fields[1], fields[2], fields[3]));
             }
+
+            // always close the file
+            bufferedReader.close();
+
+        } catch (FileNotFoundException ex) {
+            err.format("FileNotFoundException: %s%n", ex);
+        } catch (IOException ex) {
+            err.format("IOException: %s%n", ex);
         }
     }
+}
 ```
 
 ## CharacterInput
@@ -331,68 +331,68 @@ The `readFile()` method also mimics the pseudocode. As each character is read fr
 The remainder of the `switch` statement handles the two other important conditons - comma and end-of-line. When a comma is read we've reached the separator between fields so all that's necessary is to increment the `fieldNum` variable to point to the next field or element in the array of fields. When an end of line is read we can print out the array of fields that has been built up then re-initialize the array to empty and the `fieldNum` to zero in preparation to start all over again with the next line. Phew!
 
 ```java
-    /**
-     * Reads the selected file and prints the contents
-     */
-    public void readFile() {
+/**
+ * Reads the selected file and prints the contents
+ */
+public void readFile() {
 
-        // if able to open the file
-        if (prepareFile()) {
+    // if able to open the file
+    if (prepareFile()) {
 
-            try {
-                int input;
-                char ch;
-                
-                int fieldNum = 0;
+        try {
+            int input;
+            char ch;
+            
+            int fieldNum = 0;
 
-                // initialize String array elements
-                fields = new String[]{"","","","","",""};
+            // initialize String array elements
+            fields = new String[]{"","","","","",""};
 
-                // open the file and position to the start
-                FileReader fileReader = new FileReader(file);
+            // open the file and position to the start
+            FileReader fileReader = new FileReader(file);
 
-                // keep reading characters until end-of-file
-                // @see http://docs.oracle.com/javase/8/docs/api/java/io/InputStreamReader.html#read--
-                while ((input = fileReader.read()) != -1) {
-                    // cast integer value into a character
-                    ch = (char) input;
+            // keep reading characters until end-of-file
+            // @see http://docs.oracle.com/javase/8/docs/api/java/io/InputStreamReader.html#read--
+            while ((input = fileReader.read()) != -1) {
+                // cast integer value into a character
+                ch = (char) input;
 
-                    // now figure out what to do with the character just read
-                    switch (ch) {
+                // now figure out what to do with the character just read
+                switch (ch) {
 
-                        // newline character - reached end of a line
-                        case '\n':
-                            // print out the fields previously read
-                            out.println(String.format(format, fields[0], fields[1], fields[2], fields[3]));
-                            // initialize String array elements
-                            fields = new String[]{"","","","","",""};
-                            // reset field number back to zero (first element)
-                            fieldNum = 0;
-                            break;
+                    // newline character - reached end of a line
+                    case '\n':
+                        // print out the fields previously read
+                        out.println(String.format(format, fields[0], fields[1], fields[2], fields[3]));
+                        // initialize String array elements
+                        fields = new String[]{"","","","","",""};
+                        // reset field number back to zero (first element)
+                        fieldNum = 0;
+                        break;
 
-                            // return character - ignore (Windows-style encoding)
-                        case '\r':
-                            break;
-                            
-                        // comma reached so increment field number
-                        case ',':
-                            fieldNum++;
-                            break;
+                        // return character - ignore (Windows-style encoding)
+                    case '\r':
+                        break;
+                        
+                    // comma reached so increment field number
+                    case ',':
+                        fieldNum++;
+                        break;
 
-                        // append character to current field
-                        default:
-                            fields[fieldNum] += ch;
-                    }
+                    // append character to current field
+                    default:
+                        fields[fieldNum] += ch;
                 }
-
-                // always close the file
-                fileReader.close();
-
-            } catch (FileNotFoundException ex) {
-                err.format("FileNotFoundException: %s%n", ex);
-            } catch (IOException ex) {
-                err.format("IOException: %s%n", ex);
             }
+
+            // always close the file
+            fileReader.close();
+
+        } catch (FileNotFoundException ex) {
+            err.format("FileNotFoundException: %s%n", ex);
+        } catch (IOException ex) {
+            err.format("IOException: %s%n", ex);
         }
     }
+}
 ```
