@@ -126,7 +126,9 @@ END CLASS
 
 ```
 
-There are four classes involved - the main console application which is `FileSample`, a class to handle buffered input called `BufferedInput`, a class to handle character input called `CharacterInput` and a class to handle scanner input called `ScannerInput`. All three of the `xxxInput` classes have a method called `ReadFile` containing the logic necessary to read and display a text file. Even from just this high-level pseudocode you can see that using the buffered input approach is much simpler from a programmer's point of view - read a line, split that line into fields and print them. That's a whopping three lines of effort. Compare that to character input where each character is read one-at-a-time and appended to a string variable, when a comma is reached (or whatever delimiter is used in the file) then a field number variable is incremented so that you are building up the correct field. This lower-level type of reading requires ten lines of effort using character input to accomplish the same thing that three lines of buffered input can do. The scanner input is essentially identical to the buffered input and is shown mostly for reference purposes.
+There are four classes involved - the main console application `FileSample`, a class to handle buffered input called `BufferedInput`, a class to handle character input called `CharacterInput` and a class to handle scanner input called `ScannerInput`. All three of the `xxxInput` classes have a method called `ReadFile` containing the logic necessary to read and display a text file.
+
+Even from just this high-level pseudocode you can see that using the buffered input approach is much simpler from a programmer's point of view - read a line, split that line into fields and print them. That's a whopping three lines of effort. Compare that to character input where each character is read one-at-a-time and appended to a string variable, when a comma is reached (or whatever delimiter is used in the file) then a field number variable is incremented so that you are building up the correct field. This lower-level type of reading requires ten lines of effort using character input to accomplish the same thing that three lines of buffered input can do. The scanner input is essentially identical to the buffered input and is shown mostly for reference purposes.
 
 # Java Code
 ## FileSample
@@ -250,7 +252,7 @@ private boolean prepareFile() {
 
     // Determine the correct path location for the file
     // see: http://stackoverflow.com/a/10830715
-    URL path = BufferedIO.class.getResource(filename);
+    URL path = BufferedInput.class.getResource(filename);
     if (path == null) {
         err.format("File not found!! Unable to continue.\n%s", filename);
         return false;
@@ -282,9 +284,6 @@ The next action (creating a `File` instance) causes the program to attempt to ac
 The `readFile()` method most closely mimics the pseudocode which is not uncommon. When programmers think of the logic needed to handle a task, such as reading and processing data from a file, they focus on those specific steps while glossing over all the other details necessary. As this program shows, the "guts" of the read logic are almost trivial and uninteresting once all the preparations are made - obtaining the correct path to the file, verifying that the file exists, preparing the `File` class as well as the `FileReader` class.
 
 ```java
-/**
- * Reads the selected file and prints the contents
- */
 public void readFile() {
 
     // define a String to hold each line read from file
@@ -319,6 +318,40 @@ public void readFile() {
 }
 ```
 
+## ScannerInput
+The `ScannerInput` logic is basically identical to the `BufferedInput`. Because the Scanner class provides a `hasNext()` method we don't have to attempt to read a line and test for `null`. The `nextLine()` method returns a String that we can immediately invoke `.split()` with to separate into individual fields.
+
+```java
+void readFile() {
+
+    // if able to open the file
+    if (prepareFile()) {
+
+        // try to construct a Scanner instance using the File
+        try {
+            Scanner fileScanner = new Scanner(file);
+
+            // now loop and print each line
+            while (fileScanner.hasNext()) {
+                fields = fileScanner.nextLine().split(",", -1);
+                out.println(
+                    String.format(
+                        format, fields[0], fields[1], fields[2], fields[3]
+                ));
+            }
+
+            // always close the file
+            fileScanner.close();
+
+        } catch (FileNotFoundException ex) {
+            err.format("FileNotFoundException: %s%n", ex);
+        }
+    }
+}
+```
+
+The `Scanner` class provides greater tools and functionality for parsing input streams and JournalDev has [an article](https://www.journaldev.com/872/java-scanner-class-java-util-scanner) with a more complex example of advanced techniques for parsing delimited files.
+
 ## CharacterInput
 Essentially the `CharacterInput` class is identical to the `BufferedInput` above with the difference of the `readFile()` method.
 
@@ -331,9 +364,6 @@ The `readFile()` method also mimics the pseudocode. As each character is read fr
 The remainder of the `switch` statement handles the two other important conditons - comma and end-of-line. When a comma is read we've reached the separator between fields so all that's necessary is to increment the `fieldNum` variable to point to the next field or element in the array of fields. When an end of line is read we can print out the array of fields that has been built up then re-initialize the array to empty and the `fieldNum` to zero in preparation to start all over again with the next line. Phew!
 
 ```java
-/**
- * Reads the selected file and prints the contents
- */
 public void readFile() {
 
     // if able to open the file
