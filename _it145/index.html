@@ -11,6 +11,9 @@ layout: default
       {% if it145.title == 'Index' %}
         {% continue %}
       {% endif %}
+      {% if it145.url contains 'notes' %}
+        {% continue %}
+      {% endif %}
       <li>
         <h2>
           <a class="post-link" href="{{ it145.url | prepend: site.baseurl }}">{{ it145.title }}</a>
