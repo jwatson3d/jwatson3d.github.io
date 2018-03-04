@@ -11,3 +11,5 @@ categories: edu snhu it145
 [Lesson 1-5: Creating Output in Java]({{ site.baseurl }}{% link _it145/notes/lesson1-5.md %})<br />
 [Lesson 1-6: Introduction to zyBooks]({{ site.baseurl }}{% link _it145/notes/lesson1-6.md %})<br />
 [Lesson 1-7: Additional Resources]({{ site.baseurl }}{% link _it145/notes/lesson1-7.md %})<br />
+<br/>
+<span><small>&copy; {{ site.time | date: '%Y' }} <a href="/" class="black">{{ site.author }}</a></small></span>

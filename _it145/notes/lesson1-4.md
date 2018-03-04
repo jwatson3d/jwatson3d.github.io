@@ -39,3 +39,6 @@ Formatting (indentation, white space, line breaks, etc.) is so important to qual
 <span style="font-size: 12px; font-weight: bold;">Figure 4 - Properly Formatted</span>
 
 [<< Return to Index]({{ site.baseurl }}{% link _it145/notes/lesson1.md %})<br/>
+<br/>
+<span><small>&copy; {{ site.time | date: '%Y' }} <a href="/about" class="black">{{ site.author }}</a></small></span>
+

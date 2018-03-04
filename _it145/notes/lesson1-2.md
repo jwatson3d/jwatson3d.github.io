@@ -38,4 +38,5 @@ All programs need a starting point and for programming languages derived from C,
 
 Notice the opening and closing curly braces - these define the boundaries of a class, method, and block of code. As you can see the <i>main()</i> method has one statement enclosed in its curly braces and the entire <i>main()</i> method is itself contained with the curly braces that define the HelloWorld class. It goes without saying that opening and closing curly braces must be paired and matched - each opening curly brace requires a corresponding closing curly brace.
 
-[<< Return to Index]({{ site.baseurl }}{% link _it145/notes/lesson1.md %})<br/>
+[<< Return to Index]({{ site.baseurl }}{% link _it145/notes/lesson1.md %})<br/><br/>
+<span><small>&copy; {{ site.time | date: '%Y' }} <a href="/about" class="black">{{ site.author }}</a></small></span>
