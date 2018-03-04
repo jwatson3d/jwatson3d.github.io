@@ -32,3 +32,5 @@ categories: edu snhu it145
 * Fred Swartz' [Java Notes](https://www.leepoint.net/index.html)
 
 [<< Return to Index]({{ site.baseurl }}{% link _it145/notes/lesson1.md %})<br/>
+<br/>
+<span><small>&copy; {{ site.time | date: '%Y' }} <a href="/about" class="black">{{ site.author }}</a></small></span>

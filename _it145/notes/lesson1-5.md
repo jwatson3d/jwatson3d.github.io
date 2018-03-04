@@ -54,3 +54,5 @@ carry on    <- linefeed here
 <br><span style="color: rgb(255, 0, 0); font-family: &quot;Lucida Console&quot;;"><b>Takeaway</b>: Use </span><span class="yui-tag-span yui-tag" tag="span" style="color: rgb(255, 0, 0); font-family: &quot;Lucida Console&quot;;">println()</span><span class="yui-tag-span yui-tag" tag="span" style="color: rgb(255, 0, 0); font-family: &quot;Lucida Console&quot;;"> when you want <i>future</i> output to continue on the next line.</span><br>
 
 [<< Return to Index]({{ site.baseurl }}{% link _it145/notes/lesson1.md %})<br/>
+<br/>
+<span><small>&copy; {{ site.time | date: '%Y' }} <a href="/about" class="black">{{ site.author }}</a></small></span>

@@ -114,3 +114,5 @@ Notice that the Run menu option says Run Project - not “run source file”. Ag
 The NetBeans website contains a tutorial quick start similar to what I’ve put together here called <a href="https://netbeans.org/kb/docs/java/quickstart.html" target="_blank" title="Netbeans IDE Java Quick Start Tutorial">Netbeans IDE Java Quick Start Tutorial</a>. You can also use an Internet search engine to search for “netbeans tutorial” and you’ll find numerous videos and posts on the topic.<br><br>Lastly, you also have access to the <a href="https://snhu.skillport.com/skillportfe/login.action" target="_blank" title="Skillport e-book library">Skillport e-book library</a> where you’ll find an entire textbook devoted to this topic entitled <i>Beginning NetBeans IDE: For Java Developers</i>.
 
 [<< Return to Index]({{ site.baseurl }}{% link _it145/notes/lesson1.md %})<br/>
+<br/>
+<span><small>&copy; {{ site.time | date: '%Y' }} <a href="/about" class="black">{{ site.author }}</a></small></span>
