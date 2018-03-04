@@ -4,8 +4,6 @@ title:  "Lesson 2-2 Operators"
 date:   2018-01-01 18:00:00
 categories: edu snhu it145
 ---
-[<< Return to Index]({{ site.baseurl }}{% link _it145/notes/lesson2.md %})<br />
-
 While declaring variables with an initial value is convenient, all but the simplest, trivial programs will need to store different values at different times. In order to <i>assign</i> a new value to a variable we use syntax similar to what we saw for the initial value:
 ```java
 // declare and assign initial values
