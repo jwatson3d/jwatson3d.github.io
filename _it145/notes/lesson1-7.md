@@ -17,6 +17,7 @@ categories: edu snhu it145
 ## NetBeans Tutorials
 * [NetBeans IDE 8.2 Installation Instructions](https://netbeans.org/community/releases/82/install.html)
 * [NetBeans IDE Java Quickstart Tutorial](https://netbeans.org/kb/docs/java/quickstart.html)
+* [How to Use the NetBeans Debugger for Java](https://www.youtube.com/watch?v=2Z9B8wYhKWw)
 * [Dr. Christian Murphy’s NetBeans IDE Tutorials](http://www.cs.columbia.edu/~cmurphy/summer2008/1007/netbeans/index.html)
    * [Introduction](http://www.cs.columbia.edu/~cmurphy/summer2008/1007/netbeans/1_intro.html)
    * [Download and Installation](http://www.cs.columbia.edu/~cmurphy/summer2008/1007/netbeans/2_install.html)
