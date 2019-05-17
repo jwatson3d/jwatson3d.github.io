@@ -56,11 +56,19 @@ baseurl: ""
 #
 
 collections:
+  cs320:
+    output      : true
+    permalink   : /:collection/:path/
   it145:
     output      : true
     permalink   : /:collection/:path/
 
 defaults:
+  - scope:
+      path: ""
+      type: cs320
+    values:
+      layout: page
   - scope:
       path: ""
       type: it145
