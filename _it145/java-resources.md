@@ -1,5 +1,5 @@
 ---
-title:  "Java Resources"
+title:  "IT-145 Resources"
 categories: edu snhu it145
 ---
 # Java
