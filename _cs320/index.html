@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">CS-320</h1>
+
+  <ul class="post-list">
+    {% for cs320 in site.cs320 %}
+      {% if cs320.title == 'Index' %}
+        {% continue %}
+      {% endif %}
+      {% if cs320.url contains 'notes' %}
+        {% continue %}
+      {% endif %}
+      <li>
+        <h2>
+          <a class="post-link" href="{{ cs320.url | prepend: site.baseurl }}">{{ cs320.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>
