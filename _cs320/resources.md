@@ -1,9 +1,10 @@
 ---
 layout: post
-title:  "Resources"
-date:   2019-05-06 21:00:00
+title:  "CS-320 Resources"
+date:   2019-01-07 21:00:00
 categories: edu snhu cs320
 ---
+
 - [Using JUnit in Eclipse](https://courses.cs.washington.edu/courses/cse143/11wi/eclipse-tutorial/junit.shtml)
 
 - [Eclipse Support for Unit Testing with JUnit](https://www.vogella.com/tutorials/JUnit/article.html#eclipse-support-for-junit-4)
