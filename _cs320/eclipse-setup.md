@@ -11,7 +11,7 @@ Contents
 <hr/>
 
 # Import Project
-IDEs are powerful tools which also means they can be complicated to master, especially when just starting out with them. Eclipse is one of the two most widely used IDEs today...and it's free! When first opening Eclipse you are faced with a blank screen after you close the "Welcome to Eclipse" tab. The first thing you need to do is import the project that you downloaded and uncompressed (or unzipped).
+Eclipse is one of the two most widely used IDEs today...and it's free! Since IDEs are powerful tools they can also be complicated to master, especially when just starting out using one.  When first opening Eclipse you are faced with a blank screen after you close the "Welcome to Eclipse" tab. The first thing you need to do is import the project that you downloaded and uncompressed (or unzipped).
 
 ### Step 1
 Right-click anywhere in the Package Explorer tool window area on the left and choose "Import..."
@@ -39,7 +39,7 @@ Right-click on the project name at the top of the tree and choose "Properties":
 <br /><img src="http://blog.pragmatictech.guru/img/eclipse-setup/5_eclipse_package_properties.png" title="Project Properties">
 
 ### Step 6
-Make sure "Java Build Path" is selected on the left and then click the "Libraries" tab. Notice that the referened libraries in the list is wrong or incomplete. Click the "Add Library" button:
+Make sure "Java Build Path" is selected on the left and then click the "Libraries" tab. Notice that the referenced libraries in the list is wrong or incomplete. Click the "Add Library" button:
 <br /><img src="http://blog.pragmatictech.guru/img/eclipse-setup/6_eclipse_java_build_path.png" title="Java Build Path">
 
 ### Step 7
