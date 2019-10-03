@@ -6,32 +6,32 @@ categories: edu snhu it145
 imgfolder: /img/it145-eclipse
 images:
   - name: dog_vars.png
-    thumb: dog_vars_tn.jpg
+    thumb: dog_vars_tn.png
     text: Generate getters and setters
     width: 436
     height: 391
   - name: dog_generate.png
-    thumb: dog_generate_tn.jpg
+    thumb: dog_generate_tn.png
     text: Generate options
     width: 253
     height: 301
   - name: dog_getset.png
-    thumb: dog_getset_tn.jpg
+    thumb: dog_getset_tn.png
     text: Generated getters and setters
     width: 303
     height: 329
   - name: dog_tostring.png
-    thumb: dog_tostring_tn.jpg
+    thumb: dog_tostring_tn.png
     text: Generate toString() method
     width: 274
     height: 227
   - name: dog_ctor.png
-    thumb: dog_ctor_tn.jpg
+    thumb: dog_ctor_tn.png
     text: Generate constructor
     width: 303
     height: 356
   - name: dog_done.png
-    thumb: dog_done_tn.jpg
+    thumb: dog_done_tn.png
     text: Generated code
     width: 275
     height: 264
