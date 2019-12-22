@@ -4,7 +4,7 @@ id: "eclipse-setup"
 date:   2019-05-25 15:00:00
 categories: edu snhu cs320
 ---
-{% include galheader.html %}
+
 Contents
 * TOC
 {:toc}

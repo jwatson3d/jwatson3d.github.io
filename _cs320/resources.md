@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "CS-320 Resources"
 date:   2019-01-07 21:00:00
 categories: edu snhu cs320

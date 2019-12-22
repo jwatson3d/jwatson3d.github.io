@@ -11,7 +11,6 @@ images:
     width: 256
     height: 192
 ---
-{% include galheader.html %}
 Contents
 * TOC
 {:toc}
@@ -64,7 +63,7 @@ CLASS FileSample
         ELSE IF option chosen is scanner input
             PERFORM ScannerInput.ReadFile
         ELSE IF option chosen is exit
-            EXIT loop 
+            EXIT loop
         END IF
     END LOOP
 
@@ -155,18 +154,18 @@ import java.util.Scanner;
  *
  */
 public class FileSample {
-    
+
     // name of the sample file
     static String filename = "sample.csv";
 
     /**
      * The one and only main() method is our starting point
-     * 
-     * @param args 
+     *
+     * @param args
      */
     public static void main(String[] args) {
         boolean exit = false;
-        
+
         // main loop runs until exit requested
         while (!exit) {
             int option = showMenu();
@@ -190,17 +189,17 @@ public class FileSample {
             }
         }
     }
-    
+
     /**
      * Display menu until a valid choice is input.
-     * 
+     *
      * @return the menu choice
      */
     private static int showMenu() {
         Scanner consoleIn = new Scanner(System.in);
         boolean valid = false;
         int choice = 9;
-        
+
         while (!valid) {
             // display menu
             out.println();
@@ -210,10 +209,10 @@ public class FileSample {
             out.println("9. Exit");
             out.println();
             out.print("Option: ");
-            
+
             // obtain user's choice
             choice = consoleIn.nextInt();
-            
+
             // simple switch to find any valid choice
             switch (choice) {
                 case 1:
@@ -228,7 +227,7 @@ public class FileSample {
                     break;
             }
         }
-        
+
         return choice;
     }
 }
@@ -372,7 +371,7 @@ public void readFile() {
         try {
             int input;
             char ch;
-            
+
             int fieldNum = 0;
 
             // initialize String array elements
@@ -403,7 +402,7 @@ public void readFile() {
                         // return character - ignore (Windows-style encoding)
                     case '\r':
                         break;
-                        
+
                     // comma reached so increment field number
                     case ',':
                         fieldNum++;
