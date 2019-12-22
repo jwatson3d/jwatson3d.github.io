@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "FAQs"
 date:   2017-04-22 21:00:00
 categories: edu snhu it145
@@ -39,10 +38,10 @@ Now might be a good time to review [NetBeans Quick Start](/it145/netbeans-quick-
 > ```
 > URL path = YourClassNameHere.class.getResource(filename);
 > File file = new File(path.toURI());
-> 
+>
 > // FileReader reads text files in the default encoding.
 > FileReader fileReader = new FileReader(file);
-> 
+>
 > // Always wrap FileReader in BufferedReader to improve throughput.
 > BufferedReader bufferedReader = new BufferedReader(fileReader);
 > ```
@@ -51,9 +50,9 @@ Now might be a good time to review [NetBeans Quick Start](/it145/netbeans-quick-
 
 # I'm getting a `Exception in thread "main" java.io.FileNotFoundException`
 > First, let's clarify the simplest solution - did you download and name the file correctly as compared to what your program is looking for? Second, where is the file located either on your computer harddrive or relative to the project folders? The quickest, dirtiest, least elegant solution is to hardcode the exact full path to where the file is such as "C:\\Users\\John\\Documents\\IT-145\\FinalProject\\animals.txt". Note the double backslashes - this is called "escaping" the character. You could also use the Unix-style syntax of forward-slash so you don't have to escape it "C:/Users/John/Documents/IT-145/FinalProject/animals.txt". Of course, I made up (guessed) that path so you'll have to substitute the actual path on your computer.
-> 
+>
 > The "problem" with hardcoding the full path is that if the file is moved to another location you'll have to change the source code and recompile the program before it works again. It also is highly unlikely that another computer will be exactly the same - for example, I use a MacBook and my computer username may not be John.
-> 
+>
 > This problem can be more elegantly overcome by reading the FAQ just above this one or by reading the [File I/O article](http://blog.pragmatictech.guru/it145/file-io-sample/) I wrote detailing lots of techniques - see the `prepareFile()` method.
 <hr/>
 
