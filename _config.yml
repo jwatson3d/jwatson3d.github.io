@@ -20,7 +20,7 @@ minimal_mistakes_skin    : "air" # "default", "air", "aqua", "contrast", "dark",
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 locale                   : "en-US"
-title                    : Pragmatic Technology
+title                    : "Pragmatic Technology"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "John Watson"
@@ -30,7 +30,7 @@ baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : "Pragmatic Tech" # overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : "Pragmatic Technology" # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
