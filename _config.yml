@@ -113,13 +113,14 @@ analytics:
 author:
   name             : "John Watson"
   avatar           : "/assets/images/about/JW-avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Senior technologist exploring software development and delivery via DevOps"
+  bio              : "DevOps manager responsible for large, highly secure SaaS applications and nationwide network of biometric enrollment sites."
   #location         : "Nashville, TN"
   email            : "john@pragmatictech.guru"
   keybase          : "jwatson3d"
   stackoverflow    : "4185948/john-watson"
   twitter          : "jwatson3d"
   youtube          : "H30rg4xe"
+  linkedin         : "jwatson3d"
   links:
     #- label: "Website"
       #icon: "fas fa-fw fa-link"
