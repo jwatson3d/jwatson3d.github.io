@@ -2,7 +2,13 @@
 title:  "File Input Sample"
 id: "file-sample"
 date:   2017-08-20 18:00:00
-categories: edu snhu it145
+toc: true
+categories:
+  - it145
+tags:
+  - edu 
+  - snhu
+  - it145
 imgfolder: /img/file-io-sample
 images:
   - name: fileio-class-diagram.png
