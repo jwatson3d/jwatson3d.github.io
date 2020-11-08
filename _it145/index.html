@@ -4,10 +4,10 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">IT-145: Foundations in Application Development</h1>
-  <h3 class="page-heading">a.k.a. Introduction to Programming with Java</h3>
+    <h1 class="page-heading">IT-145: Foundations in Application Development</h1>
+    <h3 class="page-heading">a.k.a. Introduction to Programming with Java</h3>
 
-  <ul class="post-list">
+    <ul class="post-list">
     {% for it145 in site.it145 %}
       {% if it145.title == 'Index' %}
         {% continue %}
@@ -15,12 +15,12 @@ layout: default
       {% if it145.url contains 'notes' %}
         {% continue %}
       {% endif %}
-      <li>
-        <h2>
+        <li>
+            <h2>
           <a class="post-link" href="{{ it145.url | prepend: site.baseurl }}">{{ it145.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+            </h2>
+        </li>
+        {% endfor %}
+    </ul>
 
 </div>
