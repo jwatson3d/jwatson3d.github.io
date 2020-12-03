@@ -1,5 +1,5 @@
 ---
-title:  "Eclipse Setup"
+title:  "Eclipse Setup Walkthrough"
 id: "eclipse-setup"
 date:   2019-05-25 15:00:00
 excerpt: "Eclipse is one of the two most widely used IDEs today..…"
@@ -10,9 +10,12 @@ tags:
   - edu 
   - snhu 
   - cs320
+  - eclipse
+  - maven
 ---
 <hr/>
 
+> NOTE: This walkthrough is intended for use with Maven projects.
 # Import Project
 Eclipse is one of the two most widely used IDEs today...and it's free! Since IDEs are powerful tools they can also be complicated to master, especially when just starting out using one.  When first opening Eclipse you are faced with a blank screen after you close the "Welcome to Eclipse" tab. The first thing you need to do is import the project that you downloaded and uncompressed (or unzipped).
 

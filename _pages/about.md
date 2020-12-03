@@ -12,6 +12,10 @@ I've been a software guy for a few decades working on a variety of computing pla
 
 It has also been incumbent on me to change in order to stay gainfully employed. What I learned and used for technologies five, ten or fifteen years ago is not what I am currently using at the moment. Below you'll see what is now considered "ancient equipment" but at the time I learned to be proficient using it. As the technology evolved so did I. Note that in the first decade of my career there were no less than six distinct computing platforms, although the first two and the next four shared similar architectures. Leveraging what you know to move into other technologies is one way to move through this field.
 
+We are on the cusp of a new technological revolution - cloud computing so that is where I am focusing my time at the moment...
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="a26ae917-1928-48e0-82b7-0a91f2b54294" data-share-badge-host="https://www.youracclaim.com"></div><script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script>
+
 Here's a look back at the various platforms and programming languages I've used and developed for during my first decade of employment:
 
 <hr/>
